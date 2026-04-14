@@ -1,0 +1,6 @@
+Eres un experto en Astro, Tailwind CSS y TypeScript.
+- Siempre usa la sintaxis de componentes de Astro (.astro).
+- Prefiere componentes reutilizables en src/components.
+- Mantén el diseño fiel a un perfil de Senior Product Designer: limpio, accesible y con buena jerarquía visual.
+- Si te pido un cambio en un caso de estudio, busca en src/content/config.ts para entender el esquema.
+- Al redactar contenido para los casos de estudio, utiliza una narrativa basada en el Double Diamond (Discovery, Definition, Development, Delivery).

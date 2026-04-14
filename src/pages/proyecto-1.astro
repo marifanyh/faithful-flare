@@ -1,0 +1,630 @@
+---
+import CaseStudyLayout from "../layouts/CaseStudyLayout.astro";
+// proyecto-1.astro — Caso de estudio: UNIMOPAY
+---
+<CaseStudyLayout title="UNIMOPAY · Caso de Estudio · Mariana Hernández" activeBreadcrumbEs="UNIMOPAY" activeBreadcrumbEn="UNIMOPAY">
+  <header class="hero hero--with-project-cover">
+    <div class="hero-inner">
+      <div class="case-tag">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+        <span data-es="Caso de Estudio · B2B · Fintech Educativo" data-en="Case Study · B2B · Educational Fintech">Caso de Estudio · B2B · Fintech Educativo</span>
+      </div>
+      <h1 class="case-title">UNIMOPAY: <em data-es="Digitalizando el caos financiero" data-en="Digitalizing financial chaos">Digitalizando el caos financiero</em></h1>
+      <p class="case-hook">
+        <span data-es="La Universidad Montrer procesaba ~200 solicitudes de pago mensuales a través de un Excel compartido, sin trazabilidad, sin validación automatizada y sin visibilidad presupuestal para nadie. Mi rol fue diseñar UNIMOPAY de cero: 7 flujos de usuario end-to-end y la arquitectura de información completa para 4 perfiles radicalmente distintos." data-en="Universidad Montrer processed ~200 monthly payment requests through a shared Excel file, with no traceability, no automated validation and no budget visibility for anyone. My role was to design UNIMOPAY from scratch: 7 end-to-end user flows and the complete information architecture for 4 radically different profiles.">La Universidad Montrer procesaba ~200 solicitudes de pago mensuales a través de un Excel compartido, sin trazabilidad, sin validación automatizada y sin visibilidad presupuestal para nadie. Mi rol fue diseñar UNIMOPAY de cero: 7 flujos de usuario end-to-end y la arquitectura de información completa para 4 perfiles radicalmente distintos.</span>
+      </p>
+      <div class="meta-row">
+        <div class="meta-pill">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg>
+          <span class="label" data-es="Rol:" data-en="Role:">Rol:</span>
+          <span data-es="Lead Product Designer · Discovery & Design" data-en="Lead Product Designer · Discovery & Design">Lead Product Designer · Discovery & Design</span>
+        </div>
+        <div class="meta-pill">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          <span class="label" data-es="Cliente:" data-en="Client:">Cliente:</span>
+          Universidad Montrer · LabComm
+        </div>
+        <div class="meta-pill">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span class="label" data-es="Período:" data-en="Period:">Período:</span>
+          Jun 2025 – Jul 2025
+        </div>
+        <div class="meta-pill">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <span class="label" data-es="Alcance:" data-en="Scope:">Alcance:</span>
+          <span data-es="End-to-end: Discovery, Research, IA, UI" data-en="End-to-end: Discovery, Research, IA, UI">End-to-end: Discovery, Research, IA, UI</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-project-hero-image">
+      <img
+        src="/proyecto-unimopay.png"
+        alt="UNIMOPAY — vista del proyecto"
+        width="1728"
+        height="559"
+        loading="eager"
+        decoding="async"
+      />
+    </div>
+  </header>
+
+  <div class="page">
+
+    <!-- FASE 01 DESCUBRIMIENTO -->
+    <div class="phase blue-phase reveal">
+      <div class="phase-header">
+        <div class="phase-number blue">01</div>
+        <div>
+          <div class="phase-title" data-es="Descubrimiento" data-en="Discovery">Descubrimiento</div>
+          <div class="phase-subtitle" data-es="Empatía con el Caos" data-en="Empathy with Chaos">Empatía con el Caos</div>
+        </div>
+      </div>
+      <div class="phase-body">
+        <h3 data-es="Contexto: una institución que opera sus finanzas como si fuera 1995" data-en="Context: an institution running its finances like it's 1995">Contexto: una institución que opera sus finanzas como si fuera 1995</h3>
+        <p data-es="La Universidad Montrer gestionaba todos sus pagos a proveedores a través de un Excel compartido sin control de versiones. No existía plataforma para registro de proveedores — el proceso lo hacía manualmente un auxiliar de la DGAF. Las áreas directivas desconocían su saldo disponible hasta que alguien respondía un correo. El resultado: pagos duplicados, CLABEs erróneas detectadas después del intento de transferencia, y una burocracia que asfixiaba la operación cotidiana." data-en="Universidad Montrer managed all vendor payments through a shared Excel file with no version control. No vendor registration platform existed — a DGAF assistant handled it manually. Management departments didn't know their available balance until someone replied to an email. The result: duplicate payments, CLABE errors detected after failed transfers, and bureaucracy that strangled daily operations.">La Universidad Montrer gestionaba todos sus pagos a proveedores a través de un Excel compartido sin control de versiones. No existía plataforma para registro de proveedores — el proceso lo hacía manualmente un auxiliar de la DGAF. Las áreas directivas desconocían su saldo disponible hasta que alguien respondía un correo. Resultado: pagos duplicados, CLABEs erróneas detectadas post-transferencia, y una burocracia que asfixiaba la operación cotidiana.</p>
+
+        <h3 data-es="Los 4 actores reales del sistema" data-en="The 4 real system actors">Los 4 actores reales del sistema</h3>
+        <p data-es="UNIMOPAY no tenía un usuario principal — tenía 4 perfiles con necesidades radicalmente distintas, distintos niveles de confianza y distintas consecuencias ante un error:" data-en="UNIMOPAY didn't have one main user — it had 4 profiles with radically different needs, different trust levels and different consequences for an error:">UNIMOPAY no tenía un usuario principal — tenía 4 perfiles con necesidades radicalmente distintas, distintos niveles de confianza y distintas consecuencias ante un error:</p>
+        <div class="personas-grid">
+          <div class="persona-card">
+            <div class="persona-avatar" style="background:rgba(97,85,245,0.1)">🏛️</div>
+            <div class="persona-name">J. Noé González · <span data-es="Rector" data-en="Rector">Rector</span></div>
+            <div class="persona-role-label" data-es="Super-Admin · Máxima autoridad" data-en="Super-Admin · Highest authority">Super-Admin · Máxima autoridad</div>
+            <div class="persona-row"><span class="persona-tag tag-goal" data-es="Meta: Control total sin operar" data-en="Goal: Full control without operating">Meta: Control total sin operar</span></div>
+            <p class="persona-text" data-es="Necesita acceso a todos los reportes y poder modificar configuraciones de alto nivel. No realiza operaciones transaccionales — define políticas y monitorea la salud financiera institucional." data-en="Needs access to all reports and ability to modify high-level configurations. Does not perform transactions — defines policies and monitors institutional financial health.">Acceso total a reportes y configuraciones de alto nivel. No opera transacciones — define políticas y monitorea la salud financiera.</p>
+            <div class="persona-row" style="margin-top:8px"><span class="persona-tag tag-pain" data-es="Pain: Sin visibilidad del estado financiero real" data-en="Pain: No real financial state visibility">Pain: Sin visibilidad del estado financiero real</span></div>
+          </div>
+          <div class="persona-card">
+            <div class="persona-avatar" style="background:rgba(0,102,204,0.1)">💼</div>
+            <div class="persona-name">Adriana · <span data-es="Directora de Finanzas" data-en="Finance Director">Directora de Finanzas</span></div>
+            <div class="persona-role-label" data-es="DGAF · Operadora financiera" data-en="DGAF · Financial operator">DGAF · Operadora financiera</div>
+            <div class="persona-row"><span class="persona-tag tag-goal" data-es="Meta: Ejecutar pagos con control y trazabilidad" data-en="Goal: Execute payments with control and traceability">Meta: Pagos con control y trazabilidad</span></div>
+            <p class="persona-text" data-es="Ejecuta pagos, valida proveedores y aplica doble firma digital. Actualmente gestiona todo mediante correos y el Excel desactualizado. Es el cuello de botella del sistema." data-en="Executes payments, validates vendors and applies double digital signature. Currently manages everything via emails and the outdated Excel. She is the system bottleneck.">Ejecuta pagos, valida proveedores, aplica doble firma digital. Actualmente lo gestiona todo por correo y Excel. Es el cuello de botella del sistema.</p>
+            <div class="persona-row" style="margin-top:8px"><span class="persona-tag tag-pain" data-es="Pain: Retrabajos por errores de datos bancarios" data-en="Pain: Rework due to banking data errors">Pain: Retrabajos por errores bancarios</span></div>
+          </div>
+          <div class="persona-card">
+            <div class="persona-avatar" style="background:rgba(0,158,140,0.1)">🏃</div>
+            <div class="persona-name" data-es="Director de Deportes · Jefe de Área" data-en="Sports Director · Department Head">Director de Deportes · Jefe de Área</div>
+            <div class="persona-role-label" data-es="Solicitante · Usuario más vulnerable del sistema" data-en="Requester · Most vulnerable user in the system">Solicitante · Usuario más vulnerable del sistema</div>
+            <div class="persona-row"><span class="persona-tag tag-goal" data-es="Meta: Pagar a proveedores a tiempo" data-en="Goal: Pay vendors on time">Meta: Pagar a proveedores a tiempo</span></div>
+            <p class="persona-text" data-es="Opera con restricciones de tiempo estrictas y sin posibilidad de delegar. Sin visibilidad de su propio presupuesto hasta que la DGAF responde." data-en="Operates under time constraints with no delegation options. Zero visibility of own budget until someone at DGAF replies to an email.">Opera con restricciones de tiempo y sin posibilidad de delegar. Sin visibilidad de su propio presupuesto hasta que alguien en la DGAF responde un correo.</p>
+            <div class="persona-row" style="margin-top:8px"><span class="persona-tag tag-pain" data-es="Pain: Cero visibilidad de su propio presupuesto" data-en="Pain: Zero visibility of own budget">Pain: Cero visibilidad de su presupuesto</span></div>
+          </div>
+          <div class="persona-card">
+            <div class="persona-avatar" style="background:rgba(239,68,68,0.08)">🏦</div>
+            <div class="persona-name" data-es="Área de Bancos" data-en="Banking Department">Área de Bancos</div>
+            <div class="persona-role-label" data-es="Ejecutora · Último eslabón del flujo" data-en="Executor · Last link in the flow">Ejecutora · Último eslabón del flujo</div>
+            <div class="persona-row"><span class="persona-tag tag-goal" data-es="Meta: Ejecutar transferencias sin errores" data-en="Goal: Execute error-free transfers">Meta: Transferencias sin errores</span></div>
+            <p class="persona-text" data-es="Realiza las transferencias o emite cheques. Aplica la segunda firma digital y marca el estatus final. No puede rechazar un pago en esta etapa — solo ejecutar o marcar como pagado." data-en="Executes transfers or issues checks. Applies the second digital signature and marks final status. Cannot reject a payment at this stage — only execute or mark as paid.">Realiza transferencias, aplica segunda firma digital, marca el estatus final. No puede rechazar en esta etapa — solo ejecutar.</p>
+            <div class="persona-row" style="margin-top:8px"><span class="persona-tag tag-pain" data-es="Pain: Errores de CLABE detectados muy tarde en el flujo" data-en="Pain: CLABE errors detected too late in the flow">Pain: Errores de CLABE detectados muy tarde</span></div>
+          </div>
+        </div>
+
+        <h3 data-es="Pain points documentados en research" data-en="Pain points documented in research">Pain points documentados en research</h3>
+        <ul class="pain-list">
+          <li data-es="Control rústico en Excel: versiones simultáneas, datos desactualizados, pagos duplicados sin posibilidad de auditoría" data-en="Rudimentary Excel control: simultaneous versions, outdated data, duplicate payments with no audit trail">Control rústico en Excel: versiones simultáneas, datos desactualizados, pagos duplicados sin auditoría posible</li>
+          <li data-es="No existía plataforma para registro de proveedores — proceso manual a cargo de un auxiliar de la DGAF, fuera de cualquier sistema" data-en="No vendor registration platform existed — manual process by a DGAF assistant, outside any system">No existía plataforma para registro de proveedores — proceso manual fuera de cualquier sistema</li>
+          <li data-es="Las áreas no conocen su presupuesto disponible en tiempo real — dependen completamente de la respuesta de la DGAF" data-en="Departments don't know their available budget in real time — completely dependent on DGAF's response">Las áreas no conocen su presupuesto en tiempo real — dependencia total de la DGAF para cualquier consulta</li>
+          <li data-es="Validación reactiva de CLABEs: los errores se detectan después del intento de transferencia, no durante la captura" data-en="Fully reactive banking data validation — errors detected after the payment attempt, not during data entry">Validación de datos bancarios completamente reactiva — los errores se detectan después de intentar el pago, no durante la captura</li>
+          <li data-es="El Jefe de Área no puede delegar captura ni seguimiento — es el único responsable del proceso completo" data-en="Department Head cannot delegate — solely responsible for the entire process">El Jefe de Área no puede delegar captura ni seguimiento — es el único responsable del proceso completo</li>
+          <li data-es="Presupuestos que no se ejercen en el mes se pierden — sin regla de transferencia entre periodos para la mayoría de partidas" data-en="No real-time budget visibility — departments don't know their available balance until it's too late">Presupuestos sin visibilidad en tiempo real — las áreas no saben cuánto tienen disponible hasta que es tarde</li>
+        </ul>
+
+        <h3 data-es="Voces reales del Empathy Mapping" data-en="Real voices from Empathy Mapping">Voces reales del Empathy Mapping</h3>
+        <div class="quote-list">
+          <div class="quote-item">
+            <blockquote>
+              "El registrar el estatus de la solicitud debería hacerlo la DGAF, no yo buscando en el correo."
+            </blockquote>
+            <cite>— <span data-es="Jefe de Área, durante entrevista de usuario" data-en="Department Head, during user interview">Jefe de Área, durante entrevista de usuario</span></cite>
+          </div>
+          <div class="quote-item">
+            <blockquote>
+              "Los solicitantes pierden las solicitudes. Se duplican pagos en el Excel. Dependemos totalmente de la agilidad de la DGAF para cualquier operación."
+            </blockquote>
+            <cite>— <span data-es="Directora de Finanzas Adriana, durante sesión de shadowing" data-en="Finance Director Adriana, during shadowing session">Directora de Finanzas Adriana, durante sesión de shadowing</span></cite>
+          </div>
+        </div>
+        <figure class="case-figure case-figure--full case-figure--spaced">
+          <img
+            src="/empathy-unimopay.png"
+            alt="Mapa de empatía — UNIMOPAY, sintetizado a partir de entrevistas con Dirección de Finanzas y Rectoría"
+            width="1920"
+            height="1080"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption class="case-figure__caption--prose">
+            <p>
+              <span
+                data-es="Mapa general sintetizado a partir de entrevistas y shadowing con voces clave del gobierno financiero — entre ellas Adriana (Directora de Finanzas) y J. Noé González (Rector)."
+                data-en="General map synthesized from interviews and shadowing with key voices in financial governance — including Adriana (Finance Director) and J. Noé González (Rector)."
+              >
+                Mapa general sintetizado a partir de entrevistas y shadowing con voces clave del gobierno financiero — entre ellas Adriana (Directora de Finanzas) y J. Noé González (Rector).
+              </span>
+            </p>
+            <a
+              href="/empathy-unimopay.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="case-text-button"
+              data-es="Ver mapa de empatía completo →"
+              data-en="View full empathy map →"
+            >
+              Ver mapa de empatía completo →
+            </a>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- FASE 02 DEFINICIÓN -->
+    <div class="phase green-phase reveal">
+      <div class="phase-header">
+        <div class="phase-number green">02</div>
+        <div>
+          <div class="phase-title" data-es="Definición" data-en="Definition">Definición</div>
+          <div class="phase-subtitle" data-es="El Punto de Inflexión" data-en="The Turning Point">El Punto de Inflexión</div>
+        </div>
+      </div>
+      <div class="phase-body">
+        <h3 data-es="Insight principal" data-en="Main insight">Insight principal</h3>
+        <p data-es="El problema real no era técnico ni de pagos — era de gobierno financiero. La Universidad necesitaba un sistema de control presupuestal que devolviera autonomía a los Jefes de Área sin comprometer el control de la DGAF. Ningún actor tenía suficiente visibilidad para tomar decisiones: el Rector no podía ver el estado financiero real, Adriana gestionaba sin trazabilidad, los Jefes de Área operaban a ciegas y el Área de Bancos recibía errores detectados demasiado tarde." data-en="The real problem wasn't technical or about payments — it was about financial governance. The University needed a budget control system that returned autonomy to Department Heads without compromising DGAF control. No actor had enough visibility to make decisions: the Rector couldn't see the real financial state, Adriana managed without traceability, Department Heads operated blindly and Banking received errors detected too late.">El problema real no era técnico ni de pagos — era de gobierno financiero. Ningún actor tenía suficiente visibilidad para tomar decisiones. El diseño debía devolverle control y autonomía a todos simultáneamente.</p>
+
+        <div class="hmw-block">
+          <div class="hmw-label">How Might We</div>
+          <p class="hmw-text" data-es="¿Cómo podríamos crear un sistema de gobierno financiero que devuelva autonomía a los Jefes de Área y control total a la DGAF, en una institución donde actualmente no existe ninguna capa de validación automatizada ni trazabilidad de operaciones?" data-en="How might we create a financial governance system that returns autonomy to Department Heads and full control to DGAF, in an institution where no automated validation layer or operational traceability currently exists?">¿Cómo podríamos crear un sistema de gobierno financiero que devuelva autonomía a los Jefes de Área y control total a la DGAF, en una institución donde actualmente no existe ninguna capa de validación automatizada ni trazabilidad de operaciones?</p>
+        </div>
+
+        <h3 data-es="User Personas: Rectoría, DGAF, Jefe de Área y Bancos" data-en="User Personas: Rectorate, DGAF, Department Head and Banking">User Personas: Rectoría, DGAF, Jefe de Área y Bancos</h3>
+        <p
+          data-es="Cuatro arquetipos sintetizan el mapa de poder y operación de UNIMOPAY: quien define políticas sin operar el día a día, quien concentra validación y trazabilidad, quien solicita pagos con la menor visibilidad del sistema y quien ejecuta la transferencia en el último eslabón."
+          data-en="Four archetypes synthesize UNIMOPAY's power and operations map: who sets policy without running day-to-day work, who concentrates validation and traceability, who requests payments with the least visibility in the system, and who executes the transfer at the final link."
+        >
+          Cuatro arquetipos sintetizan el mapa de poder y operación de UNIMOPAY: quien define políticas sin operar el día a día, quien concentra validación y trazabilidad, quien solicita pagos con la menor visibilidad del sistema y quien ejecuta la transferencia en el último eslabón.
+        </p>
+
+        <figure class="case-figure case-figure--full case-figure--spaced">
+          <img
+            src="/persona-unimopay.png"
+            alt="User personas — UNIMOPAY, síntesis de Rectoría, DGAF, Jefe de Área y Bancos"
+            width="1920"
+            height="1080"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption class="case-figure__caption--prose">
+            <p>
+              <span
+                data-es="J. Noé González · Rector — visión y política institucional sin operar transacciones. Adriana · DGAF — validación, doble firma y trazabilidad en el cuello de botella actual. Jefe de Área — solicitante con plazos ajustados y sin visibilidad presupuestal en tiempo real. Área de Bancos — ejecución final del pago cuando los datos bancarios ya no pueden corregirse a tiempo."
+                data-en="J. Noé González · Rector — institutional vision and policy without running transactions. Adriana · DGAF — validation, dual signature and traceability at today's bottleneck. Department Head — requester under tight deadlines with no real-time budget visibility. Banking area — final payment execution when banking data can no longer be fixed in time."
+              >
+                J. Noé González · Rector — visión y política institucional sin operar transacciones. Adriana · DGAF — validación, doble firma y trazabilidad en el cuello de botella actual. Jefe de Área — solicitante con plazos ajustados y sin visibilidad presupuestal en tiempo real. Área de Bancos — ejecución final del pago cuando los datos bancarios ya no pueden corregirse a tiempo.
+              </span>
+            </p>
+            <a
+              href="/persona-unimopay.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="case-text-button"
+              data-es="Ver user personas completas →"
+              data-en="View full user personas →"
+            >
+              Ver user personas completas →
+            </a>
+          </figcaption>
+        </figure>
+
+        <h3 data-es="Restricciones de negocio que redefinieron el diseño" data-en="Business constraints that redefined the design">Restricciones de negocio que redefinieron el diseño</h3>
+        <p data-es="El proyecto implicó documentar y traducir restricciones operativas complejas — de roles, flujos de autorización, presupuesto y trazabilidad — en decisiones concretas de UX. Cada restricción identificada se convirtió en un requerimiento de diseño específico." data-en="The project involved documenting and translating complex operational constraints — roles, authorization flows, budget and traceability — into concrete UX decisions. Each identified constraint became a specific design requirement.">El proyecto implicó documentar y traducir restricciones operativas complejas — de roles, flujos de autorización, presupuesto y trazabilidad — en decisiones concretas de UX. Cada restricción identificada se convirtió en un requerimiento de diseño específico.</p>
+        <ul class="rule-list">
+          <li data-es="Restricciones de rol: cada perfil tenía acceso estrictamente delimitado. Los dashboards diferenciados no fueron una decisión estética — fueron un requerimiento de negocio." data-en="Role constraints: each profile had strictly delimited access. Differentiated dashboards weren't an aesthetic decision — they were a business requirement.">Restricciones de rol: cada perfil tenía acceso estrictamente delimitado. Los dashboards diferenciados fueron un requerimiento, no una decisión estética.</li>
+          <li data-es="Restricciones de flujo de autorización: múltiples actores con validaciones en cadena. Diseñar la comunicación de estados fue tan crítico como diseñar el formulario de captura." data-en="Authorization flow constraints: multiple actors with chained validations. Designing status communication was as critical as designing the input form.">Restricciones de autorización en cadena: múltiples actores, múltiples puntos de validación. Comunicar el estado de cada solicitud fue tan crítico como el formulario de captura.</li>
+          <li data-es="Restricciones presupuestales configurables por tipo de partida, no globales. Requirió diseñar para la excepción desde el inicio — no como feature posterior." data-en="Budget constraints configurable by item type, not global. Required designing for exceptions from the start — not as a later feature.">Restricciones presupuestales configurables por tipo de partida. Diseñar para la excepción desde el inicio — no como feature posterior.</li>
+          <li data-es="Restricciones de trazabilidad: toda operación debía ser auditable a largo plazo. La arquitectura contempló el histórico de operaciones como requerimiento base desde el primer día." data-en="Traceability constraints: every operation had to be long-term auditable. Architecture considered operation history as a base requirement from day one.">Requisito de trazabilidad total. La arquitectura contempló el histórico de operaciones como requerimiento base desde el primer día.</li>
+        </ul>
+
+        <h3 data-es="Los 8 estados del ciclo de vida de una solicitud" data-en="The 8 states of a request lifecycle">Los 8 estados del ciclo de vida de una solicitud</h3>
+        <p data-es="El Jefe de Área era el usuario más vulnerable y el que menos información recibía sobre su solicitud. Diseñar la comunicación de estados fue tan crítico como diseñar el formulario de captura:" data-en="The Department Head was the most vulnerable user and the one who received the least information about their request. Designing status communication was as critical as designing the capture form:">El Jefe de Área — el usuario más vulnerable — era también el que menos información recibía. Diseñar la comunicación de estados fue tan crítico como diseñar el formulario de captura.</p>
+        <div class="flow-steps">
+          <div class="flow-step"><strong data-es="Recibida" data-en="Received">Recibida</strong><span data-es="Confirmación automática con folio de seguimiento. Correo al solicitante y a la DGAF." data-en="Automatic confirmation with tracking folio. Email to requester and DGAF.">Confirmación automática con folio de seguimiento. Correo al solicitante y a la DGAF.</span></div>
+          <div class="flow-step"><strong data-es="En revisión contable" data-en="Under accounting review">En revisión contable</strong><span data-es="El Contador valida comprobante fiscal, partida y concepto. Puede rechazar con nota obligatoria de motivo." data-en="Accountant validates tax receipt, budget item and concept. Can reject with mandatory reason note.">El Contador valida comprobante fiscal, partida y concepto. Puede rechazar con nota obligatoria de motivo.</span></div>
+          <div class="flow-step"><strong data-es="Autorizada DGAF" data-en="DGAF Authorized">Autorizada DGAF</strong><span data-es="Adriana valida y asigna fecha de pago según disponibilidad. Indica cuenta bancaria de cargo." data-en="Adriana validates and assigns payment date based on availability. Indicates source bank account.">Adriana valida, asigna fecha de pago e indica cuenta bancaria de cargo.</span></div>
+          <div class="flow-step"><strong data-es="Programada" data-en="Scheduled">Programada</strong><span data-es="Área de Bancos confirma que procesará la transferencia en la fecha indicada." data-en="Banking area confirms it will process the transfer on the indicated date.">Área de Bancos confirma que procesará la transferencia en la fecha indicada.</span></div>
+          <div class="flow-step"><strong data-es="Verificación final" data-en="Final verification">Verificación final</strong><span data-es="Segunda revisión antes de ejecutar el pago — verifica que todos los datos coincidan con la solicitud original." data-en="Second review before executing the payment — verifies all data matches the original request.">Segunda revisión antes de ejecutar — verifica que todos los datos coincidan con la solicitud original.</span></div>
+          <div class="flow-step"><strong data-es="Pagada" data-en="Paid">Pagada</strong><span data-es="Área de Bancos marca como pagada con fecha real al descargar los movimientos bancarios del día." data-en="Banking area marks as paid with actual date when downloading the day's bank movements.">Área de Bancos marca como pagada con fecha real al descargar movimientos bancarios.</span></div>
+          <div class="flow-step"><strong data-es="Rechazada / Cancelada" data-en="Rejected / Cancelled">Rechazada / Cancelada</strong><span data-es="Con nota obligatoria de motivo. El solicitante recibe alerta y es su responsabilidad corregir o aclarar la solicitud." data-en="With mandatory reason note. Requester receives alert and is responsible for correcting or clarifying the request.">Con nota obligatoria de motivo. El solicitante recibe alerta y es su responsabilidad corregir.</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FASE 03 DESARROLLO -->
+    <div class="phase blue-phase reveal">
+      <div class="phase-header">
+        <div class="phase-number blue">03</div>
+        <div>
+          <div class="phase-title" data-es="Desarrollo" data-en="Development">Desarrollo</div>
+          <div class="phase-subtitle" data-es="Arquitectura e Ideación" data-en="Architecture & Ideation">Arquitectura e Ideación</div>
+        </div>
+      </div>
+      <div class="phase-body">
+        <h3 data-es="7 flujos de usuario diseñados end-to-end" data-en="7 user flows designed end-to-end">7 flujos de usuario diseñados end-to-end</h3>
+        <p data-es="La complejidad de UNIMOPAY requirió diseñar 7 flujos completos con sus propias bifurcaciones, validaciones y comunicaciones entre actores. Los 3 más representativos del reto de diseño:" data-en="UNIMOPAY's complexity required designing 7 complete flows with their own branches, validations and cross-actor communications. The 3 most representative of the design challenge:">La complejidad de UNIMOPAY requirió diseñar 7 flujos completos. Los 3 más representativos del reto de diseño:</p>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📋</div>
+            <div class="feature-title" data-es="Flujo 1: Registro de solicitud de pago" data-en="Flow 1: Payment request submission">Flujo 1: Registro de solicitud de pago</div>
+            <p class="feature-desc" data-es="El más complejo. 11 pasos con lógica condicional: acceso autorizado → presupuesto disponible → adeudos → horario permitido → proveedor registrado → datos del proveedor → revisión contable → autorización DGAF → bancos → segunda firma → estatus pagado." data-en="The most complex in the system. Multiple chained validations — access, availability, vendor data, reviews and authorizations — before executing the payment.">El más complejo del sistema. Múltiples validaciones en cadena — acceso, disponibilidad, datos del proveedor, revisiones y autorizaciones — antes de ejecutar el pago.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔄</div>
+            <div class="feature-title" data-es="Flujo 2: Ciclo de 3 actores autorizadores" data-en="Flow 2: 3-actor authorization cycle">Flujo 2: Ciclo de 3 actores autorizadores</div>
+            <p class="feature-desc" data-es="Contador → DGAF (primera firma) → Área de Bancos → DGAF (segunda firma). Cada actor tiene su propio dashboard y sus propias validaciones. 4 interfaces distintas dentro del mismo sistema de pagos." data-en="Three authorizing actors with independent interfaces and validations within the same payment system.">Tres actores autorizadores con interfaces y validaciones independientes dentro del mismo sistema de pagos.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🧾</div>
+            <div class="feature-title" data-es="Flujo 3: Comprobación de gastos" data-en="Flow 3: Expense verification">Flujo 3: Comprobación de gastos</div>
+            <p class="feature-desc" data-es="El flujo con mayor impacto humano: plazos estrictos, múltiples comprobantes para un solo anticipo, y consecuencias reales para el usuario si no completa el proceso a tiempo." data-en="The flow with the greatest human impact: strict deadlines, multiple receipts for a single advance, and real consequences for users who don't complete the process on time.">El flujo con mayor impacto humano: plazos estrictos, múltiples comprobantes para un solo anticipo, y consecuencias reales para el usuario si no completa el proceso a tiempo.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:16px; background:var(--bg2); border:1px solid var(--border); border-radius:16px; padding:24px 28px; display:flex; flex-direction:column; gap:12px;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="width:36px; height:36px; border-radius:10px; background:rgba(0,102,204,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--exp)" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+            </div>
+            <div>
+              <div style="font-weight:600; font-size:0.9rem; color:var(--text);" data-es="Diagramas de flujo — disponibles en versión completa" data-en="Flow diagrams — available in full version">Diagramas de flujo — disponibles en versión completa</div>
+              <div style="font-size:0.78rem; color:var(--text3); margin-top:2px;" data-es="Los 3 flujos de usuario con lógica de negocio detallada están incluidos en el PDF del caso de estudio." data-en="All 3 user flows with detailed business logic are included in the case study PDF.">Los 3 flujos de usuario con lógica de negocio detallada están incluidos en el PDF del caso de estudio.</div>
+            </div>
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span style="display:inline-flex; align-items:center; gap:5px; padding:4px 12px; background:var(--card-bg); border:1px solid var(--card-border); border-radius:999px; font-size:0.78rem; color:var(--text2);">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              <span data-es="Flujo 1 · Registro de solicitud" data-en="Flow 1 · Payment request">Flujo 1 · Registro de solicitud</span>
+            </span>
+            <span style="display:inline-flex; align-items:center; gap:5px; padding:4px 12px; background:var(--card-bg); border:1px solid var(--card-border); border-radius:999px; font-size:0.78rem; color:var(--text2);">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              <span data-es="Flujo 2 · Ciclo de autorización" data-en="Flow 2 · Authorization cycle">Flujo 2 · Ciclo de autorización</span>
+            </span>
+            <span style="display:inline-flex; align-items:center; gap:5px; padding:4px 12px; background:var(--card-bg); border:1px solid var(--card-border); border-radius:999px; font-size:0.78rem; color:var(--text2);">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              <span data-es="Flujo 3 · Comprobación de gastos" data-en="Flow 3 · Expense verification">Flujo 3 · Comprobación de gastos</span>
+            </span>
+          </div>
+          <div style="font-size:0.78rem; color:var(--text3); padding-top:4px; border-top:1px solid var(--border);" data-es="¿Eres reclutador o trabajamos juntos? Escríbeme y te comparto el PDF completo." data-en="Are you a recruiter or are we working together? Write me and I'll share the full PDF.">¿Eres reclutador o trabajamos juntos? Escríbeme y te comparto el PDF completo.</div>
+        </div>
+
+        <h3 data-es="Arquitectura: el Dashboard como eje central único" data-en="Architecture: the Dashboard as single central axis">Arquitectura: el Dashboard como eje central único</h3>
+        <p data-es="La decisión arquitectónica más importante fue hacer del Dashboard el punto de entrada único para todos los roles — con contenido diferenciado por perfil. Una sola plataforma, cuatro experiencias distintas. Esto evitó crear portales separados y garantizó que cualquier actor pudiera ver su contexto completo antes de ejecutar cualquier acción." data-en="The most important architectural decision was making the Dashboard the single entry point for all roles — with profile-differentiated content. One platform, four distinct experiences. This avoided creating separate portals and ensured any actor could see their full context before executing any action.">Una sola plataforma, cuatro experiencias distintas. El Dashboard como punto de entrada único con contenido diferenciado por perfil — evitando portales separados y garantizando contexto completo antes de cualquier acción.</p>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <div class="feature-title" data-es="Dashboard diferenciado por rol" data-en="Role-differentiated dashboard">Dashboard diferenciado por rol</div>
+            <p class="feature-desc" data-es="Admin: presupuesto global + historial completo con filtros avanzados + todos los módulos. Jefe de Área: solo su presupuesto y sus solicitudes — sin visibilidad de otras áreas (RN1.2). Cada rol ve exactamente lo que necesita, nada más." data-en="Admin: full view of all operations. Department Head: restricted view of their own context — no access to other departments' information.">Admin: visión global de todas las operaciones. Jefe de Área: visión restringida a su propio contexto — sin acceso a información de otras áreas.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🏢</div>
+            <div class="feature-title" data-es="Centro de presupuestos como eje" data-en="Budget center as core axis">Centro de presupuestos como eje</div>
+            <p class="feature-desc" data-es="Todo fluye a través del presupuesto. Partidas inamovibles, partidas transferibles entre periodos, y partidas exclusivas para un proveedor designado (ej. Rentas). Configuración granular por partida, no reglas globales." data-en="Budget as the central axis of the entire platform. Every request, payment and report connects to the institutional budget structure.">El presupuesto como eje central de toda la plataforma. Cada solicitud, cada pago y cada reporte están conectados a la estructura presupuestal institucional.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔔</div>
+            <div class="feature-title" data-es="Centro de notificaciones separado del flujo" data-en="Notification center separate from the flow">Centro de notificaciones separado</div>
+            <p class="feature-desc" data-es="4 alertas críticas: pago realizado, solicitud rechazada, solicitud cancelada, alerta de descuento por falta de comprobación. Vive separado del flujo transaccional para no contaminar la experiencia de captura." data-en="4 critical alerts: payment made, request rejected, request cancelled, deduction alert for unverified expense. Lives separate from the transactional flow to avoid contaminating the capture experience.">Notificaciones automáticas en cada cambio de estado relevante. Separadas del flujo transaccional para no interferir con la experiencia de captura.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📁</div>
+            <div class="feature-title" data-es="Registro de proveedores autónomo" data-en="Autonomous vendor registration">Registro de proveedores autónomo</div>
+            <p class="feature-desc" data-es="El solicitante registra al proveedor directamente en la plataforma. El área administrativa lo valida y autoriza digitalmente — eliminando el proceso manual." data-en="Requester registers directly on the platform. The administrative area validates and digitally authorizes — with full traceability from the start.">El solicitante registra al proveedor directamente en la plataforma. El área administrativa lo valida y autoriza digitalmente — eliminando el proceso manual.</p>
+          </div>
+        </div>
+
+        <figure class="case-figure case-figure--full case-figure--spaced">
+          <a
+            href="/arquitectura-unimopay.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="case-figure-image-link"
+          >
+            <img
+              src="/arquitectura-unimopay.png"
+              alt="Arquitectura de información — UNIMOPAY (Dashboard como eje central para los 4 perfiles)"
+              width="3536"
+              height="1649"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <figcaption class="case-figure__caption--prose">
+            <p>
+              <span
+                data-es="Arquitectura de información — Dashboard como eje central único para los 4 perfiles."
+                data-en="Information architecture — Dashboard as single central axis for all 4 profiles."
+              >
+                Arquitectura de información — Dashboard como eje central único para los 4 perfiles.
+              </span>
+            </p>
+            <a
+              href="/arquitectura-unimopay.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="case-text-button"
+              data-es="Ver arquitectura en grande →"
+              data-en="View full-size architecture →"
+            >
+              Ver arquitectura en grande →
+            </a>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- FASE 04 ENTREGA -->
+    <div class="phase green-phase reveal">
+      <div class="phase-header">
+        <div class="phase-number green">04</div>
+        <div>
+          <div class="phase-title" data-es="Entrega" data-en="Delivery">Entrega</div>
+          <div class="phase-subtitle" data-es="UI Design y Criterios de Éxito" data-en="UI Design & Success Criteria">UI Design y Criterios de Éxito</div>
+        </div>
+      </div>
+      <div class="phase-body">
+        <h3 data-es="Decisiones de UI que resolvieron fricciones reales" data-en="UI decisions that resolved real friction">Decisiones de UI que resolvieron fricciones reales</h3>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">✅</div>
+            <div class="feature-title" data-es="Validación preventiva de datos bancarios" data-en="Preventive banking data validation">Validación preventiva de datos bancarios</div>
+            <p class="feature-desc" data-es="Los datos bancarios se validan en tiempo real durante la captura — no después de intentar el pago. El error cambia de reactivo a preventivo: el usuario lo corrige antes de enviar, no días después." data-en="Banking data validation in real time during entry — the system detects the problem before the user submits, not after the payment fails.">Validación de datos bancarios en tiempo real durante la captura — el sistema detecta el problema antes de que el usuario lo envíe, no después de que falle el pago.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">👤</div>
+            <div class="feature-title" data-es="Self-service para el solicitante" data-en="Self-service for the requester">Self-service para el solicitante</div>
+            <p class="feature-desc" data-es="Descarga sus propios comprobantes, consulta su historial completo y corrige sus solicitudes rechazadas directamente en la plataforma. Sin necesidad de contactar a la DGAF para cada consulta." data-en="Downloads their own receipts, consults full history and corrects rejected requests directly on the platform. No need to contact DGAF for each query.">Descarga comprobantes, consulta historial y corrige rechazos sin contactar a la DGAF. Devuelve autonomía al usuario más vulnerable.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📅</div>
+            <div class="feature-title" data-es="Restricciones operativas como contexto, no como error" data-en="Operational constraints as context, not as error">Restricciones operativas como contexto</div>
+            <p class="feature-desc" data-es="Las restricciones operativas del sistema se comunican como contexto útil antes de que el usuario actúe — no como mensajes de error después de fallar." data-en="Operational constraints are communicated as useful context before the user acts — not as error messages after failing.">Las restricciones operativas se comunican como contexto útil antes de que el usuario actúe — no como mensajes de error después de fallar.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <div class="feature-title" data-es="Automatización de notificaciones" data-en="Notification automation">Automatización de notificaciones</div>
+            <p class="feature-desc" data-es="Elimina el envío manual de correos uno a uno. El sistema notifica automáticamente al solicitante y a los actores relevantes en cada cambio de estatus, con folio de seguimiento en cada correo." data-en="Eliminates manual one-by-one email sending. System automatically notifies the requester and relevant actors on each status change, with tracking folio in each email.">Notificaciones automáticas en cada cambio de estatus con folio de seguimiento. Elimina el envío manual de correos uno a uno.</p>
+          </div>
+        </div>
+
+        <div class="case-mockup-rows">
+          <div class="case-mockup-row">
+            <figure class="case-mockup-browser">
+              <div class="case-browser">
+                <div class="case-browser__chrome">
+                  <div class="case-browser__dots" aria-hidden="true">
+                    <span class="case-browser__dot case-browser__dot--r"></span>
+                    <span class="case-browser__dot case-browser__dot--y"></span>
+                    <span class="case-browser__dot case-browser__dot--g"></span>
+                  </div>
+                  <div class="case-browser__url">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                    <span>unimopay.montrer.edu.mx/dashboard</span>
+                  </div>
+                </div>
+                <img src="/mockup-dashboard-jefe.png" alt="Mockup — Dashboard Jefe de Área UNIMOPAY en navegador" loading="lazy" decoding="async" />
+              </div>
+              <figcaption class="case-figure__caption--prose">
+                <p>
+                  <span data-es="Dashboard Jefe de Área — presupuesto asignado, usado y disponible en tiempo real" data-en="Department Head Dashboard — assigned, used and available budget in real time">Dashboard Jefe de Área — presupuesto asignado, usado y disponible en tiempo real</span>
+                </p>
+              </figcaption>
+            </figure>
+            <figure class="case-mockup-card">
+              <img src="/mockup-solicitud.png" alt="Mockup — Formulario de solicitud de pago UNIMOPAY" loading="lazy" decoding="async" />
+              <figcaption class="case-figure__caption--prose">
+                <p>
+                  <span data-es="Registro de solicitud — validación preventiva de datos bancarios en tiempo real" data-en="Payment request — preventive banking data validation in real time">Registro de solicitud — validación preventiva de datos bancarios en tiempo real</span>
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="case-mockup-row">
+            <figure class="case-mockup-card">
+              <img src="/mockup-estatus-completo.png" alt="Mockup — Historial de solicitudes UNIMOPAY, vista completa" loading="lazy" decoding="async" />
+              <figcaption class="case-figure__caption--prose">
+                <p>
+                  <span data-es="Historial de solicitudes — vista completa con sidebar, filtros y acciones" data-en="Payment history — full view with sidebar, filters and actions">Historial de solicitudes — vista completa con sidebar, filtros y acciones</span>
+                </p>
+              </figcaption>
+            </figure>
+            <figure class="case-mockup-card">
+              <img src="/mockup-estatus-detalle.png" alt="Mockup — Tabla de solicitudes UNIMOPAY, detalle de estatus" loading="lazy" decoding="async" />
+              <figcaption class="case-figure__caption--prose">
+                <p>
+                  <span data-es="Tabla de solicitudes — 8 estatus del ciclo de vida" data-en="Requests table — 8 lifecycle statuses">Tabla de solicitudes — 8 estatus del ciclo de vida</span>
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="case-mockup-row">
+            <figure class="case-mockup-browser" style="grid-column: 1 / -1;">
+              <div class="case-browser">
+                <div class="case-browser__chrome">
+                  <div class="case-browser__dots" aria-hidden="true">
+                    <span class="case-browser__dot case-browser__dot--r"></span>
+                    <span class="case-browser__dot case-browser__dot--y"></span>
+                    <span class="case-browser__dot case-browser__dot--g"></span>
+                  </div>
+                  <div class="case-browser__url">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                    <span>unimopay.montrer.edu.mx/admin/solicitudes</span>
+                  </div>
+                </div>
+                <img src="/mockup-dashboard-dgaf.png" alt="Mockup — Dashboard DGAF UNIMOPAY en navegador" loading="lazy" decoding="async" />
+              </div>
+              <figcaption class="case-figure__caption--prose">
+                <p>
+                  <span data-es="Dashboard DGAF — vista centralizada de todas las solicitudes con filtros avanzados" data-en="DGAF Dashboard — centralized view of all requests with advanced filters">Dashboard DGAF — vista centralizada de todas las solicitudes con filtros avanzados</span>
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <h3 data-es="Criterios de éxito definidos con el cliente" data-en="Success criteria defined with the client">Criterios de éxito definidos con el cliente</h3>
+        <p data-es="En lugar de proyectar métricas, estos son los criterios que definimos en conjunto con la Universidad Montrer y LabComm:" data-en="Instead of projecting metrics, these are the criteria we defined together with Universidad Montrer and LabComm:">En lugar de proyectar métricas, estos son los criterios definidos en conjunto con la Universidad Montrer y LabComm:</p>
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-value green">0</div>
+            <div class="metric-label" data-es="Pagos duplicados — eliminados por validación centralizada con folio único por solicitud" data-en="Duplicate payments — eliminated by centralized validation with unique folio per request">Pagos duplicados — eliminados por validación centralizada con folio único</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">↓</div>
+            <div class="metric-label" data-es="Errores en datos bancarios post-pago → validación preventiva durante captura" data-en="Post-payment banking data errors → preventive validation during data entry">Errores en datos bancarios post-pago → validación preventiva durante captura</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value green">5</div>
+            <div class="metric-label" data-es="Años de histórico de operaciones consultable — arquitecturado como requerimiento base" data-en="Years of queryable operation history — architected from day one">Años de histórico de operaciones consultable — arquitecturado desde el primer día</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">↑</div>
+            <div class="metric-label" data-es="Autonomía del Jefe de Área — de cero visibilidad presupuestal a control en tiempo real" data-en="Department Head autonomy — from zero budget visibility to real-time control">Autonomía del Jefe de Área — de cero visibilidad a control en tiempo real</div>
+          </div>
+        </div>
+
+        <h3 data-es="Eliminación del proceso manual de registro de proveedores" data-en="Elimination of manual vendor registration process">Eliminación del proceso manual de registro de proveedores</h3>
+        <p data-es="Antes: alta manual de proveedores realizada por un auxiliar, fuera de cualquier sistema de trazabilidad. Con UNIMOPAY: el solicitante registra directamente en la plataforma y el área administrativa lo autoriza digitalmente — con trazabilidad completa." data-en="Before: manual vendor onboarding by an assistant, outside any traceability system. With UNIMOPAY: the requester registers directly on the platform and the administrative area digitally authorizes — with full traceability.">Antes: alta manual de proveedores realizada por un auxiliar de la DGAF, fuera de cualquier sistema. Con UNIMOPAY: el solicitante registra directamente en la plataforma y el área administrativa lo autoriza digitalmente — con trazabilidad completa.</p>
+      </div>
+    </div>
+
+    <!-- CONCLUSIÓN -->
+    <div class="section-divider"></div>
+    <div class="phase reveal">
+      <div class="phase-header">
+        <div class="phase-number blue">05</div>
+        <div>
+          <div class="phase-title" data-es="Conclusión y Aprendizajes" data-en="Conclusion & Learnings">Conclusión y Aprendizajes</div>
+          <div class="phase-subtitle" data-es="Transformación digital, no solo diseño de interfaz" data-en="Digital transformation, not just interface design">Transformación digital, no solo diseño de interfaz</div>
+        </div>
+      </div>
+      <div class="learning-block">
+        <p data-es="UNIMOPAY no fue un proyecto de diseño de pantallas — fue una transformación del modelo operativo de una institución. 7 flujos end-to-end, 4 perfiles radicalmente distintos. El mayor obstáculo no fue tecnológico — fue cultural y de gobierno." data-en="UNIMOPAY wasn't a screen design project — it was an operational model transformation for an institution. 7 end-to-end flows, 4 radically different profiles. The biggest obstacle wasn't technological — it was cultural and governance-related.">UNIMOPAY no fue un proyecto de diseño de pantallas — fue una transformación del modelo operativo de una institución. 7 flujos end-to-end, 4 perfiles radicalmente distintos. El mayor obstáculo no fue tecnológico — fue cultural y de gobierno.</p>
+        <div class="pull-quote" style="margin-top:20px">
+          "Entender el negocio antes de trazar el primer wireframe no es una fase opcional — es la diferencia entre diseñar una solución que transforma y una que se abandona en el primer trimestre."
+          <cite>— Mariana Hernández</cite>
+        </div>
+        <h3 style="margin-top:24px" data-es="Aprendizajes clave" data-en="Key learnings">Aprendizajes clave</h3>
+        <ul class="rule-list" style="margin-top:12px">
+          <li data-es="Los gaps del discovery son tan valiosos como los hallazgos: documentar lo que aún no se sabe (proceso de devolución de dinero, flujo de corrección de rechazados, integración con Aspel COI) fue parte del entregable profesional, no una debilidad del proceso." data-en="Discovery gaps are as valuable as findings: documenting what is not yet known (money return process, rejection correction flow, Aspel COI integration) was part of the professional deliverable, not a process weakness.">Los gaps del discovery son tan valiosos como los hallazgos. Documentar lo que aún no está definido es parte del entregable profesional — no una debilidad del proceso.</li>
+          <li data-es="Diseñar para el usuario más vulnerable primero: el Jefe de Área — con más restricciones y menos herramientas — fue el punto de partida del diseño, no un perfil secundario." data-en="Design for the most vulnerable user first: the Department Head — with more restrictions and fewer tools — was the design starting point, not a secondary profile.">Diseñar para el usuario más vulnerable primero. El Jefe de Área, con más restricciones y menos recursos, fue el punto de partida.</li>
+          <li data-es="Las restricciones de negocio complejas son decisiones de diseño disfrazadas de política institucional. Saber leerlas, cuestionarlas y traducirlas en UX es una habilidad de nivel senior." data-en="Complex business constraints are design decisions disguised as institutional policy. Knowing how to read, question and translate them into UX is a senior-level skill.">Las restricciones de negocio complejas son decisiones de diseño disfrazadas de política institucional. Saber leerlas, cuestionarlas y traducirlas en UX es una habilidad de nivel senior.</li>
+        </ul>
+        <h3 style="margin-top:20px" data-es="Palabras clave del proyecto" data-en="Project keywords">Palabras clave del proyecto</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <span style="padding:5px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:999px;font-size:0.8rem;color:var(--text2);">End-to-end Design</span>
+          <span style="padding:5px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:999px;font-size:0.8rem;color:var(--text2);">Stakeholder Management</span>
+          <span style="padding:5px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:999px;font-size:0.8rem;color:var(--text2);">User Research</span>
+          <span style="padding:5px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:999px;font-size:0.8rem;color:var(--text2);">Information Architecture</span>
+          <span style="padding:5px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:999px;font-size:0.8rem;color:var(--text2);">B2B · Fintech Educativo</span>
+          <span style="padding:5px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:999px;font-size:0.8rem;color:var(--text2);">Business Rules Analysis</span>
+          <span style="padding:5px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:999px;font-size:0.8rem;color:var(--text2);">Automation UX</span>
+          <span style="padding:5px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:999px;font-size:0.8rem;color:var(--text2);">Transformación Digital</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="case-more-projects reveal" aria-labelledby="case-more-projects-heading-um">
+      <p
+        class="case-more-projects__eyebrow"
+        data-es="Más casos de estudio"
+        data-en="More case studies"
+      >
+        Más casos de estudio
+      </p>
+      <h2 id="case-more-projects-heading-um" class="case-more-projects__title" data-es="Otros proyectos" data-en="Other projects">
+        Otros proyectos
+      </h2>
+      <p
+        class="case-more-projects__lead"
+        data-es="Consulta cómo se tradujo investigación, arquitectura de información y diseño de producto en otros retos — también en contexto educativo y B2B."
+        data-en="See how research, information architecture and product design played out in other challenges — in education and B2B contexts too."
+      >
+        Consulta cómo se tradujo investigación, arquitectura de información y diseño de producto en otros retos — también en contexto educativo y B2B.
+      </p>
+      <div class="case-more-projects__grid">
+        <a href="/proyecto-2" class="case-next-card">
+          <div class="case-next-card__cover case-next-card__cover--alumni">
+            <img
+              class="case-next-card__logo case-next-card__logo--theme-light"
+              src="/portada-alumni-light.png"
+              alt=""
+              width="200"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              class="case-next-card__logo case-next-card__logo--theme-dark"
+              src="/portada-alumni-dark.png"
+              alt=""
+              width="200"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="case-next-card__body">
+            <span class="case-next-card__tag" data-es="Educación · Plataforma Digital" data-en="Education · Digital Platform">Educación · Plataforma Digital</span>
+            <div class="case-next-card__name" data-es="Alumni UP" data-en="Alumni UP">Alumni UP</div>
+            <p
+              class="case-next-card__desc"
+              data-es="Benchmark de 10 universidades, 5 entrevistas, Card Sorting y 12 mockups finales."
+              data-en="10-university benchmark, 5 interviews, Card Sorting and 12 final mockups."
+            >
+              Benchmark de 10 universidades, 5 entrevistas, Card Sorting y 12 mockups finales.
+            </p>
+            <span class="case-next-card__cta" data-es="Ver caso de estudio →" data-en="View case study →">Ver caso de estudio →</span>
+          </div>
+        </a>
+        <a href="/proyecto-3" class="case-next-card">
+          <div class="case-next-card__cover case-next-card__cover--investigacion">
+            <img
+              class="case-next-card__logo case-next-card__logo--theme-light"
+              src="/portada-investigacion-light.png"
+              alt=""
+              width="200"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              class="case-next-card__logo case-next-card__logo--theme-dark"
+              src="/portada-investigacion-dark.png"
+              alt=""
+              width="200"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="case-next-card__body">
+            <span class="case-next-card__tag" data-es="Educación · Portal Institucional" data-en="Education · Institutional Portal">Educación · Portal Institucional</span>
+            <div class="case-next-card__name" data-es="Investigación UP" data-en="UP Research">Investigación UP</div>
+            <p
+              class="case-next-card__desc"
+              data-es="Del repositorio a la vitrina de talento — 5 entrevistas, Empathy Maps, VPC, IA y 17 mockups finales."
+              data-en="From repository to talent showcase — 5 interviews, Empathy Maps, VPC, IA and 17 final mockups."
+            >
+              Del repositorio a la vitrina de talento — 5 entrevistas, Empathy Maps, VPC, IA y 17 mockups finales.
+            </p>
+            <span class="case-next-card__cta" data-es="Ver caso de estudio →" data-en="View case study →">Ver caso de estudio →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span class="site-footer__credit">Mariana Hernández © 2026</span>
+    </footer>
+
+  </div>
+</CaseStudyLayout>

@@ -1,17 +1,444 @@
 ---
-
+import PortfolioLayout from "../layouts/PortfolioLayout.astro";
+import PortfolioHeroToggles from "../components/PortfolioHeroToggles.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<PortfolioLayout
+  title="Mariana Hernández · Senior Product Designer"
+  preloadImageSrcSet="/profile-hero-1x.jpg 480w, /profile-hero-2x.jpg 900w"
+  preloadImageSizes="(max-width: 479px) 100px, (max-width: 767px) 120px, 150px"
+>
+  <!-- ── HERO HEADER ── -->
+  <header class="hero">
+    <div class="orb3"></div>
+    <div class="hero-inner">
+
+      <div class="hero-identity">
+        <div class="photo-blob">
+          <img
+            src="/profile-hero-2x.jpg"
+            srcset="/profile-hero-1x.jpg 480w, /profile-hero-2x.jpg 900w"
+            sizes="(max-width: 479px) 100px, (max-width: 767px) 120px, 150px"
+            width="900"
+            height="1200"
+            alt="Mariana Hernández"
+            fetchpriority="high"
+            decoding="async"
+            onerror="this.onerror=null;this.src='/profile.png'"
+          />
+        </div>
+        <div class="hero-text">
+          <h1 class="name"><span class="first">Mariana</span> <span class="last">Hernández</span></h1>
+          <p class="subtitle" data-es="Senior Product Designer" data-en="Senior Product Designer">Senior Product Designer</p>
+          <div class="contact-row">
+            <a href="tel:5581098254">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.28-1.28a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              55 8109 8254
+            </a>
+            <a href="mailto:marifanyh@gmail.com">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+              marifanyh@gmail.com
+            </a>
+            <a href="https://linkedin.com/in/mariana-hernandez" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://behance.net/marifanyh20a0" target="_blank">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              <span data-es="Portafolio" data-en="Portfolio">Portafolio</span>
+            </a>
+            <span class="location">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-es="Ciudad de México" data-en="Mexico City">Ciudad de México</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <PortfolioHeroToggles />
+
+    </div>
+  </header>
+
+  <div class="page">
+
+  <!-- ── PROYECTOS ── -->
+  <section class="reveal accent-blue" style="padding-top: 40px;">
+    <p class="section-label label-projects" data-es="Proyectos" data-en="Projects">Proyectos</p>
+    <div class="projects-scroll-wrapper" id="projectsScroll">
+      <div class="projects-track">
+
+        <!-- 1. Alumni UP -->
+        <a href="/proyecto-2" class="project-card">
+          <div class="project-cover cover-alumni">
+            <img class="cover-photo" src="/portada-alumni-light.png" data-light="/portada-alumni-light.png" data-dark="/portada-alumni-dark.png" alt="Alumni UP" loading="eager" decoding="async" />
+          </div>
+          <div class="project-body">
+            <span class="project-tag" data-es="Educación · Plataforma Digital" data-en="Education · Digital Platform">Educación · Plataforma Digital</span>
+            <div class="project-title" data-es="Alumni UP: Rediseñando la pertenencia institucional" data-en="Alumni UP: Redesigning institutional belonging">Alumni UP: Rediseñando la pertenencia institucional</div>
+            <p class="project-desc" data-es="Benchmark de 10 universidades, 5 entrevistas, Card Sorting y 12 mockups finales" data-en="10-university benchmark, 5 interviews, Card Sorting and 12 final mockups">Benchmark de 10 universidades, 5 entrevistas, Card Sorting y 12 mockups finales</p>
+            <span class="project-arrow">↗</span>
+          </div>
+        </a>
+
+        <!-- 2. Investigación UP -->
+        <a href="/proyecto-3" class="project-card">
+          <div class="project-cover cover-investigacion">
+            <img class="cover-photo" src="/portada-investigacion-light.png" data-light="/portada-investigacion-light.png" data-dark="/portada-investigacion-dark.png" alt="Investigación UP" loading="lazy" decoding="async" />
+          </div>
+          <div class="project-body">
+            <span class="project-tag" data-es="Educación · Portal Institucional" data-en="Education · Institutional Portal">Educación · Portal Institucional</span>
+            <div class="project-title" data-es="Investigación UP: Del repositorio al ecosistema digital" data-en="UP Research: From repository to digital ecosystem">Investigación UP: Del repositorio al ecosistema digital</div>
+            <p class="project-desc" data-es="5 entrevistas, Empathy Maps, VPC, user personas, IA y 17 mockups finales — de repositorio estático a vitrina de talento" data-en="5 interviews, Empathy Maps, VPC, user personas, IA and 17 final mockups — from static repository to living talent showcase">5 entrevistas, Empathy Maps, VPC, user personas, IA y 17 mockups finales — de repositorio estático a vitrina de talento</p>
+            <span class="project-arrow">↗</span>
+          </div>
+        </a>
+
+        <!-- 3. UNIMOPAY -->
+        <a href="/proyecto-1" class="project-card">
+          <div class="project-cover cover-unimopay">
+            <img class="cover-photo" src="/portada-unimopay-light.png" data-light="/portada-unimopay-light.png" data-dark="/portada-unimopay-dark.png" alt="UNIMOPAY" loading="lazy" decoding="async" />
+          </div>
+          <div class="project-body">
+            <span class="project-tag" data-es="B2B · Fintech Educativo" data-en="B2B · Educational Fintech">B2B · Fintech Educativo</span>
+            <div class="project-title" data-es="UNIMOPAY: Digitalizando el caos financiero" data-en="UNIMOPAY: Digitalizing financial chaos">UNIMOPAY: Digitalizando el caos financiero</div>
+            <p class="project-desc" data-es="7 flujos end-to-end, 4 perfiles — de Excel a plataforma de gobierno financiero" data-en="7 end-to-end flows, 4 profiles — from Excel to financial governance platform">7 flujos end-to-end, 4 perfiles — de Excel a plataforma de gobierno financiero</p>
+            <span class="project-arrow">↗</span>
+          </div>
+        </a>
+
+        <!-- 4. Fitlife -->
+        <a href="/proyecto-4" class="project-card">
+          <div class="project-cover cover-fitlife">
+            <img class="cover-photo" src="/portada-fitlife-light.png" data-light="/portada-fitlife-light.png" data-dark="/portada-fitlife-fixed.png" alt="Fitlife" loading="lazy" decoding="async" />
+          </div>
+          <div class="project-body">
+            <span class="project-tag" data-es="App · Mobile · B2C" data-en="App · Mobile · B2C">App · Mobile · B2C</span>
+            <div class="project-title" data-es="Fitlife: App híbrida y plataforma web para gimnasios" data-en="Fitlife: Hybrid app and web platform for gyms">Fitlife: App híbrida y plataforma web para gimnasios</div>
+            <p class="project-desc" data-es="109 pantallas end-to-end — el cliente pidió una app, el análisis reveló que necesitaba un ecosistema" data-en="109 screens end-to-end — the client asked for an app, analysis revealed they needed an ecosystem">109 pantallas end-to-end — el cliente pidió una app, el análisis reveló que necesitaba un ecosistema</p>
+            <span class="project-arrow">↗</span>
+          </div>
+        </a>
+
+        <!-- 5. Sistema de facturación minu -->
+        <a href="/proyecto-5" class="project-card">
+          <div class="project-cover cover-minu">
+            <img class="cover-photo" src="/portada-minu-light.png" data-light="/portada-minu-light.png" data-dark="/portada-minu-dark.png" alt="minu facturación" loading="lazy" decoding="async" />
+          </div>
+          <div class="project-body">
+            <span class="project-tag" data-es="B2B · Fintech · Pagos" data-en="B2B · Fintech · Payments">B2B · Fintech · Pagos</span>
+            <div class="project-title" data-es="Sistema de facturación minu" data-en="minu billing system">Sistema de facturación minu</div>
+            <span class="project-arrow">↗</span>
+          </div>
+        </a>
+
+        <!-- 6. Design System minu -->
+        <a href="/proyecto-6" class="project-card">
+          <div class="project-cover cover-minu">
+            <img class="cover-photo" src="/portada-minu-light.png" data-light="/portada-minu-light.png" data-dark="/portada-minu-dark.png" alt="minu Design System" loading="lazy" decoding="async" />
+          </div>
+          <div class="project-body">
+            <span class="project-tag" data-es="Design System · B2B" data-en="Design System · B2B">Design System · B2B</span>
+            <div class="project-title" data-es="Design System minu" data-en="minu Design System">Design System minu</div>
+            <span class="project-arrow">↗</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROPUESTA DE VALOR ── -->
+  <section class="reveal no-divider" style="padding-top: 20px;">
+    <p class="about-text">
+      <span data-es="Senior Product Designer con <strong>más de 6 años de experiencia</strong> liderando el diseño end-to-end de productos digitales para plataformas B2B, B2C y sistemas internos. Especializada en <strong>UX Research, Design Systems</strong> y toma de decisiones basada en datos. Experiencia comprobada reduciendo fricción operativa, mejorando la adopción de usuarios y alineando objetivos de negocio con soluciones escalables."
+         data-en="Senior Product Designer with <strong>over 6 years of experience</strong> leading end-to-end design of digital products for B2B, B2C platforms and internal systems. Specialized in <strong>UX Research, Design Systems</strong> and data-driven decision making. Proven experience reducing operational friction, improving user adoption and aligning business objectives with scalable solutions.">
+        Senior Product Designer con <strong>más de 6 años de experiencia</strong> liderando el diseño end-to-end de productos digitales para plataformas B2B, B2C y sistemas internos. Especializada en <strong>UX Research, Design Systems</strong> y toma de decisiones basada en datos. Experiencia comprobada reduciendo fricción operativa, mejorando la adopción de usuarios y alineando objetivos de negocio con soluciones escalables.
+      </span>
+    </p>
+  </section>
+
+  <!-- ── EXPERIENCIA ── -->
+  <section class="reveal accent-green">
+    <p class="section-label label-exp" data-es="Experiencia" data-en="Experience">Experiencia</p>
+    <div class="exp-list">
+
+      <!-- LabComm Practice Lead -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-title">UX / UI Practice Lead</div>
+            <div class="exp-role">LabComm</div>
+          </div>
+          <span class="exp-date">Nov 2025 – Mar 2026</span>
+        </div>
+        <span class="exp-client">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          <span data-es="Cliente: Universidad Panamericana" data-en="Client: Universidad Panamericana">Cliente: Universidad Panamericana</span>
+        </span>
+        <ul class="exp-bullets">
+          <li data-es="Conduje investigación con usuarios (entrevistas, personas, empathy maps) para identificar pain points y guiar decisiones de producto" data-en="Conducted user research (interviews, personas, empathy maps) to identify pain points and guide product decisions">Conduje investigación con usuarios (entrevistas, personas, empathy maps) para identificar pain points y guiar decisiones de producto</li>
+          <li data-es="Lideré la transformación digital de procesos académicos, reduciendo la fricción operativa en +10% y aumentando la adopción interna" data-en="Led the digital transformation of academic processes, reducing operational friction by +10% and increasing internal adoption">Lideré la transformación digital de procesos académicos, reduciendo la fricción operativa en +10% y aumentando la adopción interna</li>
+          <li data-es="Facilité talleres de co-creación con stakeholders y usuarios, alineando necesidades de negocio y usuario" data-en="Facilitated co-creation workshops with stakeholders and users, aligning business and user needs">Facilité talleres de co-creación con stakeholders y usuarios, alineando necesidades de negocio y usuario</li>
+          <li data-es="Presenté insights y propuestas a nivel ejecutivo, acelerando la toma de decisiones estratégicas" data-en="Presented insights and proposals at executive level, accelerating strategic decision-making">Presenté insights y propuestas a nivel ejecutivo, acelerando la toma de decisiones estratégicas</li>
+        </ul>
+      </div>
+
+      <!-- Freelance UX / Product Designer — múltiples clientes -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-title">UX / Product Designer</div>
+            <div class="exp-role" data-es="Freelance" data-en="Freelance">Freelance</div>
+          </div>
+          <span class="exp-date">Jun 2025 – Nov 2025</span>
+        </div>
+
+        <!-- Sub-proyecto: Uncommon / Visa -->
+        <div class="exp-sub">
+          <div class="exp-sub-title">Uncommon</div>
+          <span class="exp-client">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+            <span data-es="Cliente: Visa" data-en="Client: Visa">Cliente: Visa</span>
+          </span>
+          <ul class="exp-bullets" style="margin-top:8px">
+            <li data-es="Diseñé wireframes de baja a alta fidelidad, acelerando validación y alineación con stakeholders" data-en="Designed wireframes from low to high fidelity, accelerating validation and stakeholder alignment">Diseñé wireframes de baja a alta fidelidad, acelerando validación y alineación con stakeholders</li>
+            <li data-es="Facilité Design Sprints y workshops de Design Thinking para definir dirección de producto" data-en="Facilitated Design Sprints and Design Thinking workshops to define product direction">Facilité Design Sprints y workshops de Design Thinking para definir dirección de producto</li>
+            <li data-es="Presenté avances y resultados a stakeholders, facilitando decisiones de producto" data-en="Presented progress and results to stakeholders, facilitating product decisions">Presenté avances y resultados a stakeholders, facilitando decisiones de producto</li>
+            <li data-es="Colaboré en entornos Agile/Scrum para asegurar entregas iterativas y continuas" data-en="Collaborated in Agile/Scrum environments to ensure iterative and continuous deliveries">Colaboré en entornos Agile/Scrum para asegurar entregas iterativas y continuas</li>
+          </ul>
+        </div>
+
+        <!-- Sub-proyecto: App y plataforma para gimnasios -->
+        <div class="exp-sub">
+          <div class="exp-sub-title" data-es="App y plataforma para gimnasios" data-en="Gym app & management platform">App y plataforma para gimnasios</div>
+          <ul class="exp-bullets" style="margin-top:8px">
+            <li data-es="Optimicé la experiencia de usuarios clave (dueños de negocio), facilitando la gestión operativa" data-en="Optimized key user experience (business owners), facilitating operational management">Optimicé la experiencia de usuarios clave (dueños de negocio), facilitando la gestión operativa</li>
+            <li data-es="Definí la estructura del producto, mejorando la toma de decisiones mediante dashboards" data-en="Defined product structure, improving decision-making through dashboards">Definí la estructura del producto, mejorando la toma de decisiones mediante dashboards</li>
+            <li data-es="Lideré el diseño end-to-end de una app híbrida mobile-first y plataforma web de gestión" data-en="Led end-to-end design of a mobile-first hybrid app and web management platform">Lideré el diseño end-to-end de una app híbrida mobile-first y plataforma web de gestión</li>
+            <li data-es="Construí un Design System y design tokens, asegurando consistencia y escalabilidad" data-en="Built a Design System and design tokens, ensuring consistency and scalability">Construí un Design System y design tokens, asegurando consistencia y escalabilidad</li>
+          </ul>
+        </div>
+
+        <!-- Sub-proyecto: LabComm / Universidad Montrer -->
+        <div class="exp-sub">
+          <div class="exp-sub-title">LabComm</div>
+          <span class="exp-client">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+            <span data-es="Cliente: Universidad Montrer" data-en="Client: Universidad Montrer">Cliente: Universidad Montrer</span>
+          </span>
+          <ul class="exp-bullets" style="margin-top:8px">
+            <li data-es="Diseñé una plataforma B2B de pagos, reduciendo la fricción en flujos complejos en +15%" data-en="Designed a B2B payments platform, reducing friction in complex flows by +15%">Diseñé una plataforma B2B de pagos, reduciendo la fricción en flujos complejos en +15%</li>
+            <li data-es="Apliqué Design Sprints y metodologías ágiles para acelerar la entrega de soluciones" data-en="Applied Design Sprints and agile methodologies to accelerate solution delivery">Apliqué Design Sprints y metodologías ágiles para acelerar la entrega de soluciones</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- IDS Comercial -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-title">UX Designer</div>
+            <div class="exp-role">IDS Comercial</div>
+          </div>
+          <span class="exp-date">Oct 2023 – May 2025</span>
+        </div>
+        <span class="exp-client">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          <span data-es="Cliente: Banamex" data-en="Client: Banamex">Cliente: Banamex</span>
+        </span>
+        <ul class="exp-bullets">
+          <li data-es="Lideré la estrategia UX para plataformas B2B2C del sector financiero" data-en="Led UX strategy for B2B2C platforms in the financial sector">Lideré la estrategia UX para plataformas B2B2C del sector financiero</li>
+          <li data-es="Gestioné y escalé Design Systems para asegurar consistencia entre productos" data-en="Managed and scaled Design Systems to ensure consistency across products">Gestioné y escalé Design Systems para asegurar consistencia entre productos</li>
+          <li data-es="Apliqué Jobs to Be Done y evaluaciones heurísticas para detectar oportunidades de mejora" data-en="Applied Jobs to Be Done and heuristic evaluations to detect improvement opportunities">Apliqué Jobs to Be Done y evaluaciones heurísticas para detectar oportunidades de mejora</li>
+          <li data-es="Generé documentación y handoff a desarrollo, reduciendo tiempos de implementación en +10%" data-en="Generated documentation and dev handoff, reducing implementation time by +10%">Generé documentación y handoff a desarrollo, reduciendo tiempos de implementación en +10%</li>
+        </ul>
+      </div>
+
+      <!-- minu -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-title">UX Designer</div>
+            <div class="exp-role">minu</div>
+          </div>
+          <span class="exp-date">Sep 2022 – Oct 2023</span>
+        </div>
+        <ul class="exp-bullets">
+          <li data-es="Diseñé una plataforma B2B de pagos, reduciendo la fricción en flujos complejos en +15%" data-en="Designed a B2B payments platform, reducing friction in complex flows by +15%">Diseñé una plataforma B2B de pagos, reduciendo la fricción en flujos complejos en +15%</li>
+          <li data-es="Conduje investigación con usuarios para validar necesidades y comportamientos" data-en="Conducted user research to validate needs and behaviors">Conduje investigación con usuarios para validar necesidades y comportamientos</li>
+          <li data-es="Simplifiqué procesos mediante definición de flujos y arquitectura de la información" data-en="Simplified processes through flow definition and information architecture">Simplifiqué procesos mediante definición de flujos y arquitectura de la información</li>
+        </ul>
+      </div>
+
+      <!-- Broxel -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-title">UX Designer</div>
+            <div class="exp-role">Broxel</div>
+          </div>
+          <span class="exp-date">Ene 2021 – Sep 2022</span>
+        </div>
+        <ul class="exp-bullets">
+          <li data-es="Creé el primer Design System de la empresa, reduciendo tiempos de desarrollo en 30%" data-en="Created the company's first Design System, reducing development time by 30%">Creé el primer Design System de la empresa, reduciendo tiempos de desarrollo en 30%</li>
+          <li data-es="Diseñé aplicaciones híbridas y plataformas B2B enfocadas en eficiencia operativa" data-en="Designed hybrid applications and B2B platforms focused on operational efficiency">Diseñé aplicaciones híbridas y plataformas B2B enfocadas en eficiencia operativa</li>
+          <li data-es="Optimicé procesos internos mediante análisis de funnels (Amplitude, Maze)" data-en="Optimized internal processes through funnel analysis (Amplitude, Maze)">Optimicé procesos internos mediante análisis de funnels (Amplitude, Maze)</li>
+        </ul>
+      </div>
+
+      <!-- Axity -->
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-title">Web / UX Designer Jr.</div>
+            <div class="exp-role">Axity</div>
+          </div>
+          <span class="exp-date">Ene 2019 – Ene 2021</span>
+        </div>
+        <ul class="exp-bullets">
+          <li data-es="Diseñé aplicaciones web y móviles responsivas" data-en="Designed responsive web and mobile applications">Diseñé aplicaciones web y móviles responsivas</li>
+          <li data-es="Definí flujos y lineamientos visuales para asegurar consistencia" data-en="Defined flows and visual guidelines to ensure consistency">Definí flujos y lineamientos visuales para asegurar consistencia</li>
+          <li data-es="Apoyé en la entrega end-to-end de productos digitales" data-en="Supported end-to-end delivery of digital products">Apoyé en la entrega end-to-end de productos digitales</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── SKILLS carousel ── -->
+  <section class="reveal accent-blue">
+    <p class="section-label label-skills" data-es="Skills" data-en="Skills">Skills</p>
+    <div class="skills-carousel-wrapper">
+      <div class="skills-track">
+        <span class="skill-tag" data-es="Product Design" data-en="Product Design">Product Design</span>
+        <span class="skill-tag" data-es="UX Research" data-en="UX Research">UX Research</span>
+        <span class="skill-tag" data-es="Design Systems" data-en="Design Systems">Design Systems</span>
+        <span class="skill-tag" data-es="Arquitectura de la Información" data-en="Information Architecture">Arquitectura de la Información</span>
+        <span class="skill-tag" data-es="Pruebas de usabilidad" data-en="Usability Testing">Pruebas de usabilidad</span>
+        <span class="skill-tag" data-es="Evaluación heurística" data-en="Heuristic Evaluation">Evaluación heurística</span>
+        <span class="skill-tag" data-es="JTBD" data-en="JTBD">JTBD</span>
+        <span class="skill-tag" data-es="Agile / Scrum" data-en="Agile / Scrum">Agile / Scrum</span>
+        <span class="skill-tag" data-es="Doble Diamante" data-en="Double Diamond">Doble Diamante</span>
+        <span class="skill-tag" data-es="Design Thinking" data-en="Design Thinking">Design Thinking</span>
+        <!-- duplicate for loop -->
+        <span class="skill-tag" aria-hidden="true" data-es="Product Design" data-en="Product Design">Product Design</span>
+        <span class="skill-tag" aria-hidden="true" data-es="UX Research" data-en="UX Research">UX Research</span>
+        <span class="skill-tag" aria-hidden="true" data-es="Design Systems" data-en="Design Systems">Design Systems</span>
+        <span class="skill-tag" aria-hidden="true" data-es="Arquitectura de la Información" data-en="Information Architecture">Arquitectura de la Información</span>
+        <span class="skill-tag" aria-hidden="true" data-es="Pruebas de usabilidad" data-en="Usability Testing">Pruebas de usabilidad</span>
+        <span class="skill-tag" aria-hidden="true" data-es="Evaluación heurística" data-en="Heuristic Evaluation">Evaluación heurística</span>
+        <span class="skill-tag" aria-hidden="true" data-es="JTBD" data-en="JTBD">JTBD</span>
+        <span class="skill-tag" aria-hidden="true" data-es="Agile / Scrum" data-en="Agile / Scrum">Agile / Scrum</span>
+        <span class="skill-tag" aria-hidden="true" data-es="Doble Diamante" data-en="Double Diamond">Doble Diamante</span>
+        <span class="skill-tag" aria-hidden="true" data-es="Design Thinking" data-en="Design Thinking">Design Thinking</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HERRAMIENTAS — icon grid ── -->
+  <section class="reveal accent-green">
+    <p class="section-label label-tools" data-es="Herramientas" data-en="Tools">Herramientas</p>
+    <div class="tools-grid">
+
+      <div class="tool-item">
+        <div class="tool-icon">
+          <svg viewBox="0 0 38 57" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 28.5C19 22.701 23.701 18 29.5 18S40 22.701 40 28.5 35.299 39 29.5 39 19 34.299 19 28.5z" fill="#1ABCFE"/>
+            <path d="M0 47.5C0 41.701 4.701 37 10.5 37H19v9.5C19 52.299 14.299 57 8.5 57S0 52.299 0 47.5z" fill="#0ACF83"/>
+            <path d="M19 0v19h9.5C34.299 19 39 14.299 39 8.5S34.299-2 28.5-2H19V0z" fill="#FF7262"/>
+            <path d="M0 8.5C0 14.299 4.701 19 10.5 19H19V0h-8.5C4.701 0 0 4.701 0 8.5z" fill="#F24E1E"/>
+            <path d="M0 28.5C0 34.299 4.701 39 10.5 39H19V18h-8.5C4.701 18 0 22.701 0 28.5z" fill="#A259FF"/>
+          </svg>
+        </div>
+        <span class="tool-name">Figma</span>
+      </div>
+
+      <div class="tool-item">
+        <div class="tool-icon" style="background:#1A1A2E; border-radius:8px; padding:4px;">
+          <svg viewBox="0 0 32 32" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="16" fill="#1A1A2E"/>
+            <text x="16" y="21" text-anchor="middle" fill="#FF6B6B" font-size="13" font-weight="bold" font-family="sans-serif">A</text>
+          </svg>
+        </div>
+        <span class="tool-name">Amplitude</span>
+      </div>
+
+      <div class="tool-item">
+        <div class="tool-icon" style="background:#FF4F64; border-radius:8px; display:flex; align-items:center; justify-content:center; width:36px; height:36px;">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
+          </svg>
+        </div>
+        <span class="tool-name">Maze</span>
+      </div>
+
+      <div class="tool-item">
+        <div class="tool-icon" style="background:#FFD02F; border-radius:8px; display:flex; align-items:center; justify-content:center; width:36px; height:36px;">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="#1A1A1A" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="3" width="7" height="7" rx="1"/>
+            <rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/>
+            <rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+        </div>
+        <span class="tool-name">Miro</span>
+      </div>
+
+      <div class="tool-item">
+        <div class="tool-icon" style="background:#000; border-radius:8px; display:flex; align-items:center; justify-content:center; width:36px; height:36px;">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4h16v2H4zm0 4h16v2H4zm0 4h10v2H4zm0 4h7v2H4z"/>
+          </svg>
+        </div>
+        <span class="tool-name">Notion</span>
+      </div>
+
+      <div class="tool-item">
+        <div class="tool-icon" style="background:linear-gradient(135deg,#FF0000,#FF6A00); border-radius:8px; display:flex; align-items:center; justify-content:center; width:36px; height:36px;">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <span class="tool-name">Adobe CC</span>
+      </div>
+
+      <div class="tool-item">
+        <div class="tool-icon" style="background:linear-gradient(135deg,#6155F5,#00C8B3); border-radius:8px; display:flex; align-items:center; justify-content:center; width:36px; height:36px;">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2a1 1 0 011 1v3a1 1 0 01-2 0V3a1 1 0 011-1zm0 15a1 1 0 011 1v3a1 1 0 01-2 0v-3a1 1 0 011-1zm10-7a1 1 0 010 2h-3a1 1 0 010-2h3zM5 12a1 1 0 010 2H2a1 1 0 010-2h3z"/>
+          </svg>
+        </div>
+        <span class="tool-name" data-es="IA Diseño" data-en="AI Design">IA Diseño</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── EDUCACIÓN ── -->
+  <section class="reveal accent-blue">
+    <p class="section-label label-edu" data-es="Educación" data-en="Education">Educación</p>
+    <div class="edu-list">
+      <div class="edu-item">
+        <div class="edu-degree" data-es="UX/UI Product Design" data-en="UX/UI Product Design">UX/UI Product Design</div>
+        <div class="edu-school">IEBS Business School</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree" data-es="Diseño y Comunicación Visual" data-en="Visual Design and Communication">Diseño y Comunicación Visual</div>
+        <div class="edu-school">UNAM</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree" data-es="Modelado y Animación 3D" data-en="3D Modeling and Animation">Modelado y Animación 3D</div>
+        <div class="edu-school">UNAM</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <span class="footer-name">Mariana Hernández © 2026</span>
+  </footer>
+
+  </div><!-- end .page -->
+
+</PortfolioLayout>

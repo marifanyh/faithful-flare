@@ -1,0 +1,48 @@
+---
+import "../styles/tokens.css";
+import "../styles/base.css";
+import "../styles/home.css";
+import FontLinks from "../components/FontLinks.astro";
+import ThemeLangScript from "../components/ThemeLangScript.astro";
+import PortfolioExtrasScript from "../components/PortfolioExtrasScript.astro";
+
+interface Props {
+  title: string;
+  /** Preload for LCP (hero photo, etc.) */
+  preloadImageHref?: string;
+  /** Responsive preload (matches <img srcset/sizes> when supported) */
+  preloadImageSrcSet?: string;
+  preloadImageSizes?: string;
+}
+
+const { title, preloadImageHref, preloadImageSrcSet, preloadImageSizes } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    {preloadImageSrcSet ? (
+      <link
+        rel="preload"
+        as="image"
+        imagesrcset={preloadImageSrcSet}
+        imagesizes={preloadImageSizes}
+        fetchpriority="high"
+      />
+    ) : preloadImageHref ? (
+      <link rel="preload" as="image" href={preloadImageHref} fetchpriority="high" />
+    ) : null}
+    <FontLinks />
+  </head>
+  <body>
+    <slot />
+    <ThemeLangScript revealThreshold={0.07} swapCoverPhotos />
+    <PortfolioExtrasScript />
+  </body>
+</html>

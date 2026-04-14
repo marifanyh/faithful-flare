@@ -1,0 +1,77 @@
+---
+interface Props {
+  /** IntersectionObserver threshold for .reveal */
+  revealThreshold?: number;
+  /** Swap .cover-photo src from data-light / data-dark (portfolio only) */
+  swapCoverPhotos?: boolean;
+}
+
+const { revealThreshold = 0.05, swapCoverPhotos = false } = Astro.props;
+---
+
+<script is:inline define:vars={{ revealThreshold, swapCoverPhotos }}>
+  var html = document.documentElement;
+  var currentLang = localStorage.getItem("lang") || "es";
+  var currentTheme = localStorage.getItem("theme") || "light";
+
+  function applyLang(lang) {
+    currentLang = lang;
+    localStorage.setItem("lang", lang);
+    document.querySelectorAll("[data-es]").forEach(function (el) {
+      var val = el.getAttribute("data-" + lang);
+      if (val !== null) el.innerHTML = val;
+    });
+    var langIcon = document.getElementById("langIcon");
+    var langToggle = document.getElementById("langToggle");
+    if (langIcon) langIcon.textContent = lang === "es" ? "\uD83C\uDDF2\uD83C\uDDFD" : "\uD83C\uDDFA\uD83C\uDDF8";
+    if (langToggle) langToggle.checked = lang !== "es";
+  }
+
+  function applyTheme(theme) {
+    currentTheme = theme;
+    html.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+    var themeIcon = document.getElementById("themeIcon");
+    var themeToggle = document.getElementById("themeToggle");
+    if (themeIcon) themeIcon.textContent = theme === "light" ? "\uD83C\uDF19" : "\u2600\uFE0F";
+    if (themeToggle) themeToggle.checked = theme !== "light";
+    if (swapCoverPhotos) {
+      document.querySelectorAll(".cover-photo").forEach(function (img) {
+        var src = img.getAttribute(theme === "dark" ? "data-dark" : "data-light");
+        if (src) img.src = src;
+      });
+    }
+  }
+
+  window.toggleLang = function () {
+    applyLang(currentLang === "es" ? "en" : "es");
+  };
+  window.toggleTheme = function () {
+    applyTheme(currentTheme === "light" ? "dark" : "light");
+  };
+
+  var revealEls = document.querySelectorAll(".reveal");
+  if (!("IntersectionObserver" in window)) {
+    revealEls.forEach(function (el) {
+      el.classList.add("visible");
+    });
+  } else {
+    var ro = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add("visible");
+            ro.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: revealThreshold }
+    );
+    revealEls.forEach(function (el) {
+      ro.observe(el);
+    });
+  }
+
+  applyTheme(currentTheme);
+  applyLang(currentLang);
+</script>

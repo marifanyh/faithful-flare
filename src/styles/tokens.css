@@ -1,0 +1,93 @@
+/**
+ * Design tokens — Mariana Hernández portfolio
+ * Single source of truth for color, surfaces, type stacks, radii scale.
+ */
+:root,
+[data-theme="light"] {
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-serif: "DM Serif Display", Georgia, serif;
+
+  --nav-height: 52px;
+  --nav-surface: rgba(248, 247, 247, 0.92);
+
+  --radius-sm: 12px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 20px;
+
+  --space-page-inline: 20px;
+  --space-page-inline-md: 48px;
+  --space-page-inline-xl: 80px;
+
+  --bg: #f8f7f7;
+  --bg2: #eeecea;
+  --bg3: #e5e2de;
+  --border: rgba(0, 0, 0, 0.08);
+  --text: #000000;
+  --text2: #222222;
+  --text3: #666666;
+  --skills: #00c8b3;
+  --skills-light: #009e8c;
+  --role: #6155f5;
+  /* Unified blue: readable on cards and UI chrome (aligned with case studies) */
+  --exp: #0066cc;
+  --contact: #555555;
+  --bullet: #000000;
+  --toggle-bg: rgba(0, 0, 0, 0.1);
+  --toggle-active-bg: #6155f5;
+  --toggle-knob: #ffffff;
+  --tag-bg: rgba(97, 85, 245, 0.07);
+  --tag-border: rgba(97, 85, 245, 0.2);
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.07);
+  --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  --proj-accent: #0066cc;
+  --timeline-line: rgba(0, 0, 0, 0.1);
+  --hero-grad: linear-gradient(135deg, #eef0ff 0%, #f0fbfa 50%, #eaf4ff 100%);
+  --hero-orb1: rgba(97, 85, 245, 0.12);
+  --hero-orb2: rgba(0, 200, 179, 0.1);
+  --hero-orb3: rgba(0, 102, 204, 0.1);
+  --date-pill-text: #5a5a5a;
+  --pull-bg: rgba(97, 85, 245, 0.05);
+  --pull-border: #6155f5;
+
+  /* Semantic RGB for rgba() mixes */
+  --rgb-exp: 0, 102, 204;
+  --rgb-skills: 0, 200, 179;
+}
+
+[data-theme="dark"] {
+  --nav-surface: rgba(18, 20, 23, 0.92);
+  --bg: #121417;
+  --bg2: #1a1d21;
+  --bg3: #22262b;
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #ffffff;
+  --text2: #cccccc;
+  --text3: #888888;
+  --skills: #00c8b3;
+  --skills-light: #00c8b3;
+  --role: #8b82f8;
+  --exp: #3ba7ff;
+  --contact: #aaaaaa;
+  --bullet: #ffffff;
+  --toggle-bg: rgba(255, 255, 255, 0.12);
+  --toggle-active-bg: #6155f5;
+  --toggle-knob: #ffffff;
+  --tag-bg: rgba(97, 85, 245, 0.15);
+  --tag-border: rgba(97, 85, 245, 0.35);
+  --card-bg: #1a1d21;
+  --card-border: rgba(255, 255, 255, 0.07);
+  --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  --proj-accent: #3ba7ff;
+  --timeline-line: rgba(255, 255, 255, 0.1);
+  --hero-grad: linear-gradient(135deg, #1a1c2e 0%, #121c1a 50%, #121824 100%);
+  --hero-orb1: rgba(97, 85, 245, 0.18);
+  --hero-orb2: rgba(0, 200, 179, 0.12);
+  --hero-orb3: rgba(59, 167, 255, 0.12);
+  --date-pill-text: #888888;
+  --pull-bg: rgba(139, 130, 248, 0.08);
+  --pull-border: #8b82f8;
+  --rgb-exp: 59, 167, 255;
+  --rgb-skills: 0, 200, 179;
+}

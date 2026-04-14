@@ -1,0 +1,420 @@
+---
+import CaseStudyLayout from "../layouts/CaseStudyLayout.astro";
+// proyecto-4.astro — Caso de estudio: Fitlife
+---
+<CaseStudyLayout title="Fitlife · Caso de Estudio · Mariana Hernández" activeBreadcrumbEs="Fitlife">
+  <header class="hero hero--with-project-cover">
+    <div class="hero-inner">
+      <div class="case-tag">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+        <span data-es="Caso de Estudio · App Mobile · Plataforma Web · B2C" data-en="Case Study · Mobile App · Web Platform · B2C">Caso de Estudio · App Mobile · Plataforma Web · B2C</span>
+      </div>
+      <h1 class="case-title">Fitlife: <em data-es="Cuando el cliente pide una app y necesita un ecosistema" data-en="When the client asks for an app and needs an ecosystem">Cuando el cliente pide una app y necesita un ecosistema</em></h1>
+      <p class="case-hook">
+        <span data-es="El cliente llegó con un brief simple: una app para gimnasios. El análisis de requerimientos reveló que sin una plataforma web de administración, la app era inoperable. El resultado: un ecosistema digital completo de 109 pantallas — 66 de app híbrida y 43 de plataforma web — diseñado end-to-end con Design System externo y asistencia de herramientas de IA." data-en="The client came with a simple brief: a gym app. Requirements analysis revealed that without a web administration platform, the app was inoperable. The result: a complete 109-screen digital ecosystem — 66 mobile app and 43 web platform — designed end-to-end with an external Design System and AI tool assistance.">El cliente llegó con un brief simple: una app para gimnasios. El análisis de requerimientos reveló que sin una plataforma web de administración, la app era inoperable. El resultado: un ecosistema digital completo de 109 pantallas — 66 de app híbrida y 43 de plataforma web — diseñado end-to-end con Design System externo y asistencia de herramientas de IA.</span>
+      </p>
+      <div class="meta-row">
+        <div class="meta-pill">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg>
+          <span class="label" data-es="Rol:" data-en="Role:">Rol:</span>
+          <span data-es="Lead Product Designer · Única diseñadora" data-en="Lead Product Designer · Solo designer">Lead Product Designer · Única diseñadora</span>
+        </div>
+        <div class="meta-pill">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          <span class="label" data-es="Cliente:" data-en="Client:">Cliente:</span>
+          Fitlife
+        </div>
+        <div class="meta-pill">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span class="label" data-es="Período:" data-en="Period:">Período:</span>
+          2025
+        </div>
+        <div class="meta-pill">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          <span class="label" data-es="Alcance:" data-en="Scope:">Alcance:</span>
+          <span data-es="App híbrida · Plataforma web · 109 pantallas" data-en="Hybrid app · Web platform · 109 screens">App híbrida · Plataforma web · 109 pantallas</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-project-hero-image">
+      <img
+        src="/proyecto-fitlife.png"
+        alt="Fitlife — vista del proyecto"
+        width="1728"
+        height="559"
+        loading="eager"
+        decoding="async"
+      />
+    </div>
+  </header>
+
+  <div class="page">
+
+    <!-- FASE 01: LEVANTAMIENTO -->
+    <div class="phase blue-phase reveal">
+      <div class="phase-header">
+        <div class="phase-number blue">01</div>
+        <div>
+          <div class="phase-title" data-es="Levantamiento de Requerimientos" data-en="Requirements Gathering">Levantamiento de Requerimientos</div>
+          <div class="phase-subtitle" data-es="El Brief que se convirtió en dos productos" data-en="The Brief that became two products">El Brief que se convirtió en dos productos</div>
+        </div>
+      </div>
+      <div class="phase-body">
+
+        <h3 data-es="El brief inicial: una app para gimnasios" data-en="The initial brief: a gym app">El brief inicial: una app para gimnasios</h3>
+        <p data-es="Fitlife llegó con un objetivo claro: necesitaban una app móvil para sus usuarios — acceso a clases, rutinas, membresías y seguimiento de progreso. El alcance parecía delimitado. Sin embargo, al iniciar el análisis de requerimientos surgió una pregunta que cambió todo el proyecto: ¿quién administra el contenido de la app?" data-en="Fitlife came with a clear objective: they needed a mobile app for their users — class access, routines, memberships and progress tracking. The scope seemed defined. However, when requirements analysis began, a question emerged that changed the entire project: who manages the app's content?">Fitlife llegó con un objetivo claro: una app móvil para sus usuarios. Sin embargo, al iniciar el análisis de requerimientos surgió la pregunta que cambió todo el proyecto: ¿quién administra el contenido de la app?</p>
+
+        <div class="pull-quote">
+          "Sin una plataforma de administración, la app es solo una pantalla en blanco. El cliente no lo había contemplado porque nadie se lo había dicho antes."
+          <cite>— Mariana Hernández</cite>
+        </div>
+
+        <h3 data-es="De un producto a un ecosistema" data-en="From one product to an ecosystem">De un producto a un ecosistema</h3>
+        <p data-es="El análisis reveló que la app requería gestión dinámica de: instructores, clases, horarios, membresías, pagos, notificaciones y métricas de uso. Todo esto era imposible de mantener sin un panel de administración web. Presenté al cliente la necesidad de desarrollar ambos productos en paralelo, con la arquitectura diseñada desde el inicio para que se comunicaran correctamente." data-en="Analysis revealed that the app required dynamic management of: instructors, classes, schedules, memberships, payments, notifications and usage metrics. All of this was impossible to maintain without a web admin panel. I presented the client with the need to develop both products in parallel, with architecture designed from the start for proper communication.">El análisis reveló que la app requería gestión dinámica de instructores, clases, horarios, membresías, pagos, notificaciones y métricas. Todo imposible sin un panel web de administración. Presenté al cliente la necesidad de dos productos en paralelo, con arquitectura diseñada desde el inicio para que se comunicaran.</p>
+
+        <h3 data-es="Roadmap de trabajo" data-en="Work roadmap">Roadmap de trabajo</h3>
+        <p data-es="Antes de diseñar una sola pantalla, construí un roadmap que delimitó fases, entregables y dependencias entre la app y la plataforma web. Este documento fue clave para alinear expectativas con el cliente y definir el orden lógico de diseño — empezando por la arquitectura compartida antes de bifurcar en las dos interfaces." data-en="Before designing a single screen, I built a roadmap defining phases, deliverables and dependencies between the app and the web platform. This document was key for aligning client expectations and defining the logical design order — starting with shared architecture before branching into the two interfaces.">Construí un roadmap que delimitó fases, entregables y dependencias entre ambos productos. Fue el documento que alineó expectativas con el cliente y definió el orden lógico — arquitectura compartida primero, interfaces diferenciadas después.</p>
+
+        <img src="/fitlife-roadmap.png" alt="Roadmap del proyecto Fitlife" loading="lazy" style="width:100%;border-radius:12px;margin-top:16px;" />
+
+        <h3 data-es="Benchmark" data-en="Benchmark">Benchmark</h3>
+        <p data-es="Analicé apps y plataformas de gestión de gimnasios existentes para identificar mejores prácticas y gaps de experiencia. El hallazgo principal: la mayoría de soluciones trataban la app del usuario y el panel de administración como productos independientes, generando inconsistencias en el flujo de datos y fricciones para el operador del gimnasio." data-en="I analyzed existing gym management apps and platforms to identify best practices and experience gaps. The main finding: most solutions treated the user app and admin panel as independent products, creating data flow inconsistencies and friction for gym operators.">Analicé apps y plataformas de gestión de gimnasios existentes. Hallazgo principal: la mayoría trataban la app y el panel admin como productos independientes, generando inconsistencias de datos y fricción para el operador.</p>
+
+        <img src="/fitlife-benchamark-1.png" alt="Benchmark Fitlife — parte 1" loading="lazy" style="width:100%;border-radius:12px;margin-top:16px;" />
+        <img src="/fitlife-benchamark-2.png" alt="Benchmark Fitlife — parte 2" loading="lazy" style="width:100%;border-radius:12px;margin-top:12px;" />
+        <img src="/fitlife-benchamark-3.png" alt="Benchmark Fitlife — parte 3" loading="lazy" style="width:100%;border-radius:12px;margin-top:12px;" />
+
+      </div>
+    </div>
+
+    <!-- FASE 02: ARQUITECTURA Y FLUJOS -->
+    <div class="phase green-phase reveal">
+      <div class="phase-header">
+        <div class="phase-number green">02</div>
+        <div>
+          <div class="phase-title" data-es="Arquitectura y Flujos" data-en="Architecture & Flows">Arquitectura y Flujos</div>
+          <div class="phase-subtitle" data-es="Diseñar el sistema antes que las pantallas" data-en="Design the system before the screens">Diseñar el sistema antes que las pantallas</div>
+        </div>
+      </div>
+      <div class="phase-body">
+
+        <h3 data-es="Arquitectura de información: dos productos, un sistema" data-en="Information architecture: two products, one system">Arquitectura de información: dos productos, un sistema</h3>
+        <p data-es="La decisión más importante del proyecto fue diseñar una arquitectura de información unificada antes de bifurcar en las dos interfaces. Esto garantizó que cada entidad — usuario, clase, instructor, membresía — tuviera la misma definición en la app y en la plataforma web, evitando inconsistencias en el desarrollo posterior." data-en="The most important decision was designing a unified information architecture before branching into two interfaces. This ensured every entity — user, class, instructor, membership — had the same definition in the app and web platform, avoiding inconsistencies in subsequent development.">La decisión más crítica: diseñar una arquitectura de información unificada antes de bifurcar en las dos interfaces. Cada entidad — usuario, clase, instructor, membresía — con la misma definición en ambos productos.</p>
+
+        <figure style="margin-top:16px;">
+          <img src="/fitlife-arquitectura-app.png" alt="Arquitectura de información — App Fitlife" loading="lazy" style="width:100%;border-radius:12px;" />
+          <figcaption style="font-size:0.8rem;color:var(--text3);margin-top:10px;line-height:1.5;">
+            <span data-es="Arquitectura de la app híbrida Fitlife. La arquitectura de la plataforma web de administración está disponible en el PDF completo del proyecto." data-en="Information architecture for the Fitlife hybrid app. The web administration platform architecture is available in the full project PDF.">Arquitectura de la app híbrida Fitlife. La arquitectura de la plataforma web de administración está disponible en el PDF completo del proyecto.</span>
+          </figcaption>
+        </figure>
+
+        <h3 data-es="Diagramas de flujo" data-en="Flow diagrams">Diagramas de flujo</h3>
+        <p data-es="Diseñé los flujos de usuario para los perfiles principales: miembro del gimnasio (app) y administrador/operador (plataforma web). Los flujos más complejos fueron los de gestión de membresías y el de registro/check-in — que debían sincronizarse en tiempo real entre la app del usuario y el panel del administrador." data-en="I designed user flows for the main profiles: gym member (app) and administrator/operator (web platform). The most complex flows were membership management and registration/check-in — which needed real-time synchronization between the user app and admin panel.">Flujos diseñados para dos perfiles principales: miembro del gimnasio (app) y administrador (plataforma web). Los más complejos: gestión de membresías y check-in — sincronización en tiempo real entre ambos productos.</p>
+
+
+        <div style="margin-top:16px; background:var(--bg2); border:1px solid var(--border); border-radius:16px; padding:24px 28px; display:flex; flex-direction:column; gap:12px;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="width:36px; height:36px; border-radius:10px; background:rgba(0,102,204,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--exp)" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+            </div>
+            <div>
+              <div style="font-weight:600; font-size:0.9rem; color:var(--text);" data-es="Diagramas de flujo — disponibles en versión completa" data-en="Flow diagrams — available in full version">Diagramas de flujo — disponibles en versión completa</div>
+              <div style="font-size:0.78rem; color:var(--text3); margin-top:2px;" data-es="Los flujos de usuario con lógica detallada están incluidos en el PDF del caso de estudio." data-en="User flows with detailed logic are included in the case study PDF.">Los flujos de usuario con lógica detallada están incluidos en el PDF del caso de estudio.</div>
+            </div>
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px;">
+            <span style="display:inline-flex; align-items:center; gap:5px; padding:4px 12px; background:var(--card-bg); border:1px solid var(--card-border); border-radius:999px; font-size:0.78rem; color:var(--text2);">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              <span data-es="Flujo 1 · Registro y onboarding" data-en="Flow 1 · Registration &amp; onboarding">Flujo 1 · Registro y onboarding</span>
+            </span>
+            <span style="display:inline-flex; align-items:center; gap:5px; padding:4px 12px; background:var(--card-bg); border:1px solid var(--card-border); border-radius:999px; font-size:0.78rem; color:var(--text2);">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              <span data-es="Flujo 2 · Gestión de membresías" data-en="Flow 2 · Membership management">Flujo 2 · Gestión de membresías</span>
+            </span>
+            <span style="display:inline-flex; align-items:center; gap:5px; padding:4px 12px; background:var(--card-bg); border:1px solid var(--card-border); border-radius:999px; font-size:0.78rem; color:var(--text2);">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              <span data-es="Flujo 3 · Check-in y clases" data-en="Flow 3 · Check-in &amp; classes">Flujo 3 · Check-in y clases</span>
+            </span>
+          </div>
+          <div style="font-size:0.78rem; color:var(--text3); padding-top:4px; border-top:1px solid var(--border);" data-es="¿Eres reclutador o trabajamos juntos? Escríbeme y te comparto el PDF completo." data-en="Are you a recruiter or are we working together? Write me and I'll share the full PDF.">¿Eres reclutador o trabajamos juntos? Escríbeme y te comparto el PDF completo.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FASE 03: WIREFRAMES CON IA -->
+    <div class="phase blue-phase reveal">
+      <div class="phase-header">
+        <div class="phase-number blue">03</div>
+        <div>
+          <div class="phase-title" data-es="Wireframes" data-en="Wireframes">Wireframes</div>
+          <div class="phase-subtitle" data-es="IA como acelerador, no como sustituto" data-en="AI as accelerator, not substitute">IA como acelerador, no como sustituto</div>
+        </div>
+      </div>
+      <div class="phase-body">
+
+        <h3 data-es="Uso estratégico de herramientas de IA" data-en="Strategic use of AI tools">Uso estratégico de herramientas de IA <span class="ai-badge">✦ Lovable · UXPilot</span></h3>
+        <p data-es="Para la etapa de wireframes utilicé Lovable y UXPilot como herramientas de aceleración. La IA no definió la arquitectura ni los flujos — eso ya estaba resuelto. Su rol fue generar estructuras de pantalla base a partir de los requerimientos documentados, que yo luego validé, ajusté y refiné contra la arquitectura y los flujos diseñados previamente." data-en="For wireframing I used Lovable and UXPilot as acceleration tools. AI didn't define the architecture or flows — those were already solved. Its role was generating base screen structures from documented requirements, which I then validated, adjusted and refined against the pre-designed architecture and flows.">Usé Lovable y UXPilot como aceleradores de wireframes. La IA no definió arquitectura ni flujos — eso ya estaba resuelto. Su rol fue generar estructuras base que yo validé, ajusté y refiné contra los requerimientos y la arquitectura documentados.</p>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <div class="feature-title" data-es="Lo que hizo la IA" data-en="What AI did">Lo que hizo la IA</div>
+            <p class="feature-desc" data-es="Generar estructuras de layout base, proponer jerarquías visuales iniciales y acelerar la exploración de patrones de navegación para 109 pantallas." data-en="Generate base layout structures, propose initial visual hierarchies and accelerate navigation pattern exploration for 109 screens.">Generar estructuras de layout, proponer jerarquías visuales iniciales y acelerar la exploración de navegación para 109 pantallas.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🧠</div>
+            <div class="feature-title" data-es="Lo que hice yo" data-en="What I did">Lo que hice yo</div>
+            <p class="feature-desc" data-es="Validar cada wireframe contra los flujos y la arquitectura, corregir inconsistencias, definir estados de componentes y garantizar coherencia entre la app y la plataforma web." data-en="Validate each wireframe against flows and architecture, fix inconsistencies, define component states and ensure coherence between app and web platform.">Validar cada wireframe contra flujos y arquitectura, corregir inconsistencias, definir estados de componentes y garantizar coherencia entre app y plataforma web.</p>
+          </div>
+        </div>
+
+        <img src="/fitlife-wireframes-app-1.png" alt="Wireframes — App Fitlife, parte 1" loading="lazy" style="width:100%;border-radius:12px;margin-top:16px;" />
+        <img src="/fitlife-wireframes-app-2.png" alt="Wireframes — App Fitlife, parte 2" loading="lazy" style="width:100%;border-radius:12px;margin-top:12px;" />
+
+      </div>
+    </div>
+
+    <!-- FASE 04: MOCKUPS -->
+    <div class="phase green-phase reveal">
+      <div class="phase-header">
+        <div class="phase-number green">04</div>
+        <div>
+          <div class="phase-title" data-es="Diseño de Alta Fidelidad" data-en="High-Fidelity Design">Diseño de Alta Fidelidad</div>
+          <div class="phase-subtitle" data-es="Antigua Design System · 109 pantallas" data-en="Antigua Design System · 109 screens">Antigua Design System · 109 pantallas</div>
+        </div>
+      </div>
+      <div class="phase-body">
+
+        <h3 data-es="Antigua Design System como base" data-en="Antigua Design System as foundation">Antigua Design System como base</h3>
+        <p data-es="Para los mockups de alta fidelidad utilicé Antigua, una librería de componentes agnóstica al framework. La elección fue estratégica: Antigua permitió mantener consistencia visual entre la app híbrida y la plataforma web sin crear un Design System desde cero — liberando tiempo para enfocarlo en las decisiones de UX y en la lógica de interacción." data-en="For high-fidelity mockups I used Antigua, a framework-agnostic component library. The choice was strategic: Antigua allowed maintaining visual consistency between the hybrid app and web platform without building a Design System from scratch — freeing time to focus on UX decisions and interaction logic.">Usé Antigua, una librería de componentes agnóstica al framework. La elección fue estratégica: consistencia visual entre app y plataforma web sin construir un Design System desde cero — tiempo liberado para enfocarlo en decisiones de UX y lógica de interacción.</p>
+
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-value green">66</div>
+            <div class="metric-label" data-es="pantallas de app híbrida (iOS · Android)" data-en="hybrid app screens (iOS · Android)">pantallas de app híbrida</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">43</div>
+            <div class="metric-label" data-es="pantallas de plataforma web de administración" data-en="web administration platform screens">pantallas de plataforma web</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value green">2</div>
+            <div class="metric-label" data-es="perfiles de usuario: miembro y administrador" data-en="user profiles: member and administrator">perfiles de usuario</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">1</div>
+            <div class="metric-label" data-es="arquitectura compartida para ambos productos" data-en="shared architecture for both products">arquitectura compartida</div>
+          </div>
+        </div>
+
+        <h3 data-es="App híbrida — pantallas principales" data-en="Hybrid app — main screens">App híbrida — pantallas principales</h3>
+
+        <img src="/fitlife-mockups-app-1.png" alt="Mockups — App híbrida Fitlife, parte 1" loading="lazy" style="width:100%;border-radius:12px;margin-top:16px;" />
+        <img src="/fitlife-mockups-app-2.png" alt="Mockups — App híbrida Fitlife, parte 2" loading="lazy" style="width:100%;border-radius:12px;margin-top:12px;" />
+
+        <h3 style="margin-top:28px;" data-es="Plataforma web de administración — pantallas principales" data-en="Web administration platform — main screens">Plataforma web de administración — pantallas principales</h3>
+
+        <div class="case-mockup-rows">
+          <div class="case-mockup-row">
+            <figure class="case-mockup-browser">
+              <div class="case-browser">
+                <div class="case-browser__chrome">
+                  <div class="case-browser__dots" aria-hidden="true">
+                    <span class="case-browser__dot case-browser__dot--r"></span>
+                    <span class="case-browser__dot case-browser__dot--y"></span>
+                    <span class="case-browser__dot case-browser__dot--g"></span>
+                  </div>
+                  <div class="case-browser__url">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                    <span>admin.fitlife.mx/dashboard</span>
+                  </div>
+                </div>
+                <img src="/fitlife-mockups-1.png" alt="Plataforma web Fitlife — Dashboard" loading="lazy" decoding="async" />
+              </div>
+            </figure>
+            <figure class="case-mockup-card">
+              <img src="/fitlife-mockups-2.png" alt="Plataforma web Fitlife — pantalla 2" loading="lazy" decoding="async" />
+            </figure>
+          </div>
+          <div class="case-mockup-row">
+            <figure class="case-mockup-card">
+              <img src="/fitlife-mockups-3.png" alt="Plataforma web Fitlife — pantalla 3" loading="lazy" decoding="async" />
+            </figure>
+            <figure class="case-mockup-browser">
+              <div class="case-browser">
+                <div class="case-browser__chrome">
+                  <div class="case-browser__dots" aria-hidden="true">
+                    <span class="case-browser__dot case-browser__dot--r"></span>
+                    <span class="case-browser__dot case-browser__dot--y"></span>
+                    <span class="case-browser__dot case-browser__dot--g"></span>
+                  </div>
+                  <div class="case-browser__url">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                    <span>admin.fitlife.mx/clases</span>
+                  </div>
+                </div>
+                <img src="/fitlife-mockups-4.png" alt="Plataforma web Fitlife — Gestión de clases" loading="lazy" decoding="async" />
+              </div>
+            </figure>
+          </div>
+          <div class="case-mockup-row">
+            <figure class="case-mockup-browser">
+              <div class="case-browser">
+                <div class="case-browser__chrome">
+                  <div class="case-browser__dots" aria-hidden="true">
+                    <span class="case-browser__dot case-browser__dot--r"></span>
+                    <span class="case-browser__dot case-browser__dot--y"></span>
+                    <span class="case-browser__dot case-browser__dot--g"></span>
+                  </div>
+                  <div class="case-browser__url">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                    <span>admin.fitlife.mx/membresias</span>
+                  </div>
+                </div>
+                <img src="/fitlife-mockups-5.png" alt="Plataforma web Fitlife — Membresías" loading="lazy" decoding="async" />
+              </div>
+            </figure>
+            <figure class="case-mockup-card">
+              <img src="/fitlife-mockups-6.png" alt="Plataforma web Fitlife — pantalla 6" loading="lazy" decoding="async" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONCLUSIÓN -->
+    <div class="section-divider"></div>
+    <div class="phase reveal">
+      <div class="phase-header">
+        <div class="phase-number blue">05</div>
+        <div>
+          <div class="phase-title" data-es="Conclusión y Aprendizajes" data-en="Conclusion & Learnings">Conclusión y Aprendizajes</div>
+          <div class="phase-subtitle" data-es="El diseñador que ve más allá del brief" data-en="The designer who sees beyond the brief">El diseñador que ve más allá del brief</div>
+        </div>
+      </div>
+      <div class="learning-block">
+        <p data-es="Fitlife demostró que una de las contribuciones más valiosas de un Product Designer senior no es diseñar lo que el cliente pide — sino identificar lo que el cliente necesita pero no sabe que necesita. Proponer la plataforma web de administración no fue una decisión de alcance; fue una decisión de producto que determinó la viabilidad del proyecto completo." data-en="Fitlife demonstrated that one of a senior Product Designer's most valuable contributions isn't designing what the client asks for — but identifying what the client needs but doesn't know they need. Proposing the web admin platform wasn't a scope decision; it was a product decision that determined the viability of the entire project.">Fitlife demostró que una de las contribuciones más valiosas de un Product Designer senior no es diseñar lo que el cliente pide — sino identificar lo que necesita pero no sabe que necesita. Proponer la plataforma web no fue una decisión de alcance; fue una decisión de producto que determinó la viabilidad del proyecto.</p>
+
+        <div class="pull-quote" style="margin-top:20px;">
+          "La IA no reemplazó el criterio de diseño — lo aceleró. Cada wireframe generado fue evaluado, corregido y validado contra una arquitectura que la IA nunca vio."
+          <cite>— Mariana Hernández</cite>
+        </div>
+
+        <h3 style="margin-top:24px;" data-es="Aprendizajes clave" data-en="Key learnings">Aprendizajes clave</h3>
+        <ul class="rule-list" style="margin-top:12px;">
+          <li data-es="El análisis de requerimientos no es solo documentar lo que el cliente pide — es identificar las dependencias y vacíos que el cliente no ve. Detectar la necesidad de la plataforma web fue el momento de mayor valor del proyecto." data-en="Requirements analysis isn't just documenting what the client asks — it's identifying the dependencies and gaps the client doesn't see. Detecting the need for the web platform was the project's highest-value moment.">El análisis de requerimientos no es solo documentar — es identificar los vacíos que el cliente no ve. Detectar la necesidad de la plataforma web fue el momento de mayor valor del proyecto.</li>
+          <li data-es="Diseñar la arquitectura de información compartida antes de bifurcar en dos interfaces fue la decisión que garantizó la coherencia del ecosistema. Sin ese paso, ambos productos habrían sido inconsistentes." data-en="Designing shared information architecture before branching into two interfaces was the decision that guaranteed ecosystem coherence. Without that step, both products would have been inconsistent.">La arquitectura compartida antes de bifurcar fue la decisión que garantizó la coherencia del ecosistema completo.</li>
+          <li data-es="Las herramientas de IA son aceleradores valiosos cuando se aplican después de resolver la arquitectura y los flujos — no antes. Usarlas al revés genera pantallas coherentes visualmente pero inconsistentes funcionalmente." data-en="AI tools are valuable accelerators when applied after solving architecture and flows — not before. Using them in reverse generates visually coherent but functionally inconsistent screens.">Las herramientas de IA son valiosas después de resolver arquitectura y flujos — no antes. El orden importa.</li>
+        </ul>
+
+        <h3 style="margin-top:20px;" data-es="Palabras clave del proyecto" data-en="Project keywords">Palabras clave del proyecto</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+          <span style="padding:5px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:999px;font-size:0.8rem;color:var(--text2);">Requirements Analysis</span>
+          <span style="padding:5px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:999px;font-size:0.8rem;color:var(--text2);">Product Thinking</span>
+          <span style="padding:5px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:999px;font-size:0.8rem;color:var(--text2);">Information Architecture</span>
+          <span style="padding:5px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:999px;font-size:0.8rem;color:var(--text2);">App Mobile · Híbrida</span>
+          <span style="padding:5px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:999px;font-size:0.8rem;color:var(--text2);">Plataforma Web</span>
+          <span style="padding:5px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:999px;font-size:0.8rem;color:var(--text2);">Design System</span>
+          <span style="padding:5px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:999px;font-size:0.8rem;color:var(--text2);">AI-Assisted Design</span>
+          <span style="padding:5px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:999px;font-size:0.8rem;color:var(--text2);">End-to-end Design</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="case-more-projects reveal" aria-labelledby="case-more-projects-heading-fit">
+      <p
+        class="case-more-projects__eyebrow"
+        data-es="Más casos de estudio"
+        data-en="More case studies"
+      >
+        Más casos de estudio
+      </p>
+      <h2 id="case-more-projects-heading-fit" class="case-more-projects__title" data-es="Otros proyectos" data-en="Other projects">
+        Otros proyectos
+      </h2>
+      <p
+        class="case-more-projects__lead"
+        data-es="Consulta cómo se tradujo investigación, arquitectura de información y diseño de producto en otros retos — también en contexto educativo y B2B."
+        data-en="See how research, information architecture and product design played out in other challenges — in education and B2B contexts too."
+      >
+        Consulta cómo se tradujo investigación, arquitectura de información y diseño de producto en otros retos — también en contexto educativo y B2B.
+      </p>
+      <div class="case-more-projects__grid">
+        <a href="/proyecto-2" class="case-next-card">
+          <div class="case-next-card__cover case-next-card__cover--alumni">
+            <img
+              class="case-next-card__logo case-next-card__logo--theme-light"
+              src="/portada-alumni-light.png"
+              alt=""
+              width="200"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              class="case-next-card__logo case-next-card__logo--theme-dark"
+              src="/portada-alumni-dark.png"
+              alt=""
+              width="200"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="case-next-card__body">
+            <span class="case-next-card__tag" data-es="Educación · Plataforma Digital" data-en="Education · Digital Platform">Educación · Plataforma Digital</span>
+            <div class="case-next-card__name" data-es="Alumni UP" data-en="Alumni UP">Alumni UP</div>
+            <p
+              class="case-next-card__desc"
+              data-es="Benchmark de 10 universidades, 5 entrevistas, Card Sorting y 12 mockups finales."
+              data-en="10-university benchmark, 5 interviews, Card Sorting and 12 final mockups."
+            >
+              Benchmark de 10 universidades, 5 entrevistas, Card Sorting y 12 mockups finales.
+            </p>
+            <span class="case-next-card__cta" data-es="Ver caso de estudio →" data-en="View case study →">Ver caso de estudio →</span>
+          </div>
+        </a>
+        <a href="/proyecto-1" class="case-next-card">
+          <div class="case-next-card__cover case-next-card__cover--unimopay">
+            <img
+              class="case-next-card__logo case-next-card__logo--theme-light"
+              src="/portada-unimopay-light.png"
+              alt=""
+              width="200"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              class="case-next-card__logo case-next-card__logo--theme-dark"
+              src="/portada-unimopay-dark.png"
+              alt=""
+              width="200"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="case-next-card__body">
+            <span class="case-next-card__tag" data-es="B2B · Fintech Educativo" data-en="B2B · Educational Fintech">B2B · Fintech Educativo</span>
+            <div class="case-next-card__name" data-es="UNIMOPAY" data-en="UNIMOPAY">UNIMOPAY</div>
+            <p
+              class="case-next-card__desc"
+              data-es="Digitalizar el caos financiero — 7 flujos end-to-end, 4 perfiles y plataforma de gobierno financiero."
+              data-en="Digitalizing financial chaos — 7 end-to-end flows, 4 profiles and a financial governance platform."
+            >
+              Digitalizar el caos financiero — 7 flujos end-to-end, 4 perfiles y plataforma de gobierno financiero.
+            </p>
+            <span class="case-next-card__cta" data-es="Ver caso de estudio →" data-en="View case study →">Ver caso de estudio →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span class="site-footer__credit">Mariana Hernández © 2026</span>
+    </footer>
+
+  </div>
+</CaseStudyLayout>

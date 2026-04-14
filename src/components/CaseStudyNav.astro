@@ -1,0 +1,41 @@
+---
+interface Props {
+  activeEs: string;
+  activeEn?: string;
+}
+
+const { activeEs, activeEn = activeEs } = Astro.props;
+---
+
+<nav class="topnav">
+  <div class="breadcrumbs">
+    <a href="/" class="breadcrumb-item">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        ><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg
+      >
+      <span data-es="Portfolio" data-en="Portfolio">Portfolio</span>
+    </a>
+    <span class="breadcrumb-sep">›</span>
+    <a href="/" class="breadcrumb-item" data-es="Proyectos" data-en="Projects">Proyectos</a>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-item active" data-es={activeEs} data-en={activeEn}>{activeEs}</span>
+  </div>
+  <div class="nav-controls">
+    <div class="toggle-group-nav">
+      <span class="toggle-label-nav" data-es="Tema" data-en="Theme">Tema</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="themeToggle" onchange="toggleTheme()" />
+        <div class="toggle-track"></div>
+        <div class="toggle-knob"><span id="themeIcon">&#127769;</span></div>
+      </label>
+    </div>
+    <div class="toggle-group-nav">
+      <span class="toggle-label-nav">ES/EN</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="langToggle" onchange="toggleLang()" />
+        <div class="toggle-track"></div>
+        <div class="toggle-knob"><span id="langIcon">&#127474;&#127485;</span></div>
+      </label>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,393 @@
+---
+import CaseStudyLayout from "../layouts/CaseStudyLayout.astro";
+// proyecto-5.astro — Caso de estudio: Sistema de facturación minu
+---
+<CaseStudyLayout title="Sistema de facturación minu · Caso de Estudio · Mariana Hernández" activeBreadcrumbEs="Facturación minu" activeBreadcrumbEn="minu Billing">
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="case-tag">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+        <span data-es="Herramienta Interna · Fintech · B2B" data-en="Internal Tool · Fintech · B2B">Herramienta Interna · Fintech · B2B</span>
+      </div>
+      <h1 class="case-title">minu: <em data-es="Eliminando el error humano del ciclo de facturación" data-en="Eliminating human error from the billing cycle">Eliminando el error humano del ciclo de facturación</em></h1>
+      <p class="case-hook">
+        <span data-es="minu, startup líder de beneficios laborales en México con más de 2,000 empresas clientes, enfrentaba cada trimestre el mismo problema: facturas con errores que sus clientes no pagaban. El reto era rediseñar el proceso de facturación desde adentro — antes de que el churn siguiera creciendo." data-en="minu, Mexico's leading employee benefits startup with over 2,000 client companies, faced the same problem every quarter: invoices with errors their clients wouldn't pay. The challenge was to redesign the billing process from the inside — before churn kept growing.">minu, startup líder de beneficios laborales en México con más de 2,000 empresas clientes, enfrentaba cada trimestre el mismo problema: facturas con errores que sus clientes no pagaban. El reto era rediseñar el proceso de facturación desde adentro — antes de que el churn siguiera creciendo.</span>
+      </p>
+      <div class="meta-row">
+        <div class="meta-pill">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg>
+          <span class="label" data-es="Rol:" data-en="Role:">Rol:</span>
+          <span data-es="Product Designer" data-en="Product Designer">Product Designer</span>
+        </div>
+        <div class="meta-pill">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          <span class="label" data-es="Cliente:" data-en="Client:">Cliente:</span>
+          <span>minu</span>
+        </div>
+        <div class="meta-pill">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span class="label" data-es="Metodología:" data-en="Methodology:">Metodología:</span>
+          <span data-es="Design Thinking · SCRUM · 6 semanas" data-en="Design Thinking · SCRUM · 6 weeks">Design Thinking · SCRUM · 6 semanas</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-project-hero-image">
+      <img
+        src="/proyecto-facturacion.png"
+        alt="minu — Sistema de facturación"
+        width="1728"
+        height="559"
+        loading="eager"
+        decoding="async"
+      />
+    </div>
+  </header>
+
+  <div class="page">
+
+    <!-- FASE 01: DESCUBRIMIENTO -->
+    <div class="phase blue-phase reveal">
+      <div class="phase-header">
+        <div class="phase-number blue">01</div>
+        <div>
+          <div class="phase-title" data-es="Descubrimiento" data-en="Discovery">Descubrimiento</div>
+          <div class="phase-subtitle" data-es="El problema no era de volumen, era de origen" data-en="The problem wasn't volume, it was origin">El problema no era de volumen, era de origen</div>
+        </div>
+      </div>
+      <div class="phase-body">
+
+        <h3 data-es="Contexto: un proceso manual con fricción en cada paso" data-en="Context: a manual process with friction at every step">Contexto: un proceso manual con fricción en cada paso</h3>
+        <p data-es="El equipo de análisis de datos identificó mediante el funnel interno que el 30% de las facturas emitidas cada trimestre contenían errores de datos fiscales — razón social incorrecta, RFC erróneo, nombre de empresa mal capturado. El drop off no estaba en el cobro: estaba en la emisión." data-en="The data analysis team identified through the internal funnel that 30% of invoices issued each quarter contained tax data errors — incorrect company name, wrong RFC, mistyped business name. The drop off wasn't at collection: it was at issuance.">El equipo de análisis de datos identificó mediante el funnel interno que el 30% de las facturas emitidas cada trimestre contenían errores de datos fiscales — razón social incorrecta, RFC erróneo, nombre de empresa mal capturado. El drop off no estaba en el cobro: estaba en la emisión.</p>
+
+        <h3 style="margin-top:24px;" data-es="El flujo roto: 7 pasos donde cada error reiniciaba el ciclo" data-en="The broken flow: 7 steps where every error reset the cycle">El flujo roto: 7 pasos donde cada error reiniciaba el ciclo</h3>
+
+        <div class="flow-steps">
+          <div class="flow-step"><strong data-es="Captura" data-en="Capture">Captura</strong><span data-es="Ventas captura datos del cliente en el sistema." data-en="Sales captures client data in the system.">Ventas captura datos del cliente en el sistema.</span></div>
+          <div class="flow-step"><strong data-es="Emisión" data-en="Issuance">Emisión</strong><span data-es="Finanzas emite la factura con los datos recibidos." data-en="Finance issues the invoice with the received data.">Finanzas emite la factura con los datos recibidos.</span></div>
+          <div class="flow-step"><strong data-es="Envío" data-en="Delivery">Envío</strong><span data-es="La factura se envía al cliente." data-en="The invoice is sent to the client.">La factura se envía al cliente.</span></div>
+          <div class="flow-step"><strong data-es="Detección del error" data-en="Error detected">Detección del error</strong><span data-es="El cliente detecta el error y rechaza la factura." data-en="The client spots the error and rejects the invoice.">El cliente detecta el error y rechaza la factura.</span></div>
+          <div class="flow-step"><strong data-es="Cancelación SAT" data-en="SAT cancellation">Cancelación SAT</strong><span data-es="Finanzas cancela la factura ante el SAT." data-en="Finance cancels the invoice with the SAT.">Finanzas cancela la factura ante el SAT.</span></div>
+          <div class="flow-step"><strong data-es="Cotejo manual" data-en="Manual check">Cotejo manual</strong><span data-es="Ventas y Finanzas cotejan datos manualmente." data-en="Sales and Finance manually cross-check the data.">Ventas y Finanzas cotejan datos manualmente.</span></div>
+          <div class="flow-step"><strong data-es="Reemisión" data-en="Reissuance">Reemisión</strong><span data-es="Se reemite la factura y se espera pago. Un proceso de 2 días tardaba más de una semana." data-en="Invoice is reissued and payment awaited. A 2-day process took over a week.">Se reemite la factura y se espera pago. Un proceso de 2 días tardaba más de una semana.</span></div>
+        </div>
+
+        <h3 style="margin-top:28px;" data-es="Levantamiento de requerimientos: 2 perfiles, un solo proceso roto" data-en="Requirements gathering: 2 profiles, one broken process">Levantamiento de requerimientos: 2 perfiles, un solo proceso roto</h3>
+        <p data-es="Conduje entrevistas con los dos responsables del proceso — el equipo de Ventas y el equipo de Finanzas — para mapear el flujo real vs. el flujo esperado. El hallazgo principal: el error no era humano por descuido, era humano por diseño. No había validaciones, no había un formato estándar de captura y no había trazabilidad del estado de cada factura." data-en="I conducted interviews with the two teams responsible for the process — Sales and Finance — to map the actual flow vs. the expected flow. The main finding: the error wasn't human by carelessness, it was human by design. There were no validations, no standard capture format and no traceability of each invoice's status.">Conduje entrevistas con los dos responsables del proceso — el equipo de Ventas y el equipo de Finanzas — para mapear el flujo real vs. el flujo esperado. El hallazgo principal: el error no era humano por descuido, era humano por diseño. No había validaciones, no había un formato estándar de captura y no había trazabilidad del estado de cada factura.</p>
+
+        <div class="pull-quote" style="margin-top:24px;">
+          <p data-es="La propuesta de negocio: en lugar de contratar a una persona dedicada exclusivamente a revisar facturas — la solución que negocio estaba evaluando — propuse construir una herramienta interna que eliminara el error desde el origen con validaciones en tiempo real. El argumento fue simple: una persona reduce errores, un sistema los previene." data-en="The business proposal: instead of hiring a person dedicated exclusively to reviewing invoices — the solution business was evaluating — I proposed building an internal tool that eliminated error at the source with real-time validations. The argument was simple: a person reduces errors, a system prevents them.">La propuesta de negocio: en lugar de contratar a una persona dedicada exclusivamente a revisar facturas — la solución que negocio estaba evaluando — propuse construir una herramienta interna que eliminara el error desde el origen con validaciones en tiempo real. El argumento fue simple: una persona reduce errores, un sistema los previene.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FASE 02: DEFINICIÓN -->
+    <div class="phase green-phase reveal">
+      <div class="phase-header">
+        <div class="phase-number green">02</div>
+        <div>
+          <div class="phase-title" data-es="Definición" data-en="Definition">Definición</div>
+          <div class="phase-subtitle" data-es="El insight" data-en="The insight">El insight</div>
+        </div>
+      </div>
+      <div class="phase-body">
+
+        <p data-es="El problema no era que Finanzas emitiera mal las facturas. Era que recibía datos incorrectos y no tenía ningún mecanismo para detectarlo antes de timbrar." data-en="The problem wasn't that Finance was issuing invoices incorrectly. It was that they received incorrect data and had no mechanism to detect it before stamping.">El problema no era que Finanzas emitiera mal las facturas. Era que recibía datos incorrectos y no tenía ningún mecanismo para detectarlo antes de timbrar.</p>
+
+        <div class="pull-quote" style="margin-top:20px;">
+          <p data-es="HMW: ¿Cómo podríamos diseñar un flujo de facturación donde los datos incorrectos no puedan avanzar al siguiente paso?" data-en="HMW: How might we design a billing flow where incorrect data cannot advance to the next step?">HMW: ¿Cómo podríamos diseñar un flujo de facturación donde los datos incorrectos no puedan avanzar al siguiente paso?</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FASE 03: DESARROLLO -->
+    <div class="phase blue-phase reveal">
+      <div class="phase-header">
+        <div class="phase-number blue">03</div>
+        <div>
+          <div class="phase-title" data-es="Desarrollo" data-en="Development">Desarrollo</div>
+          <div class="phase-subtitle" data-es="Design Thinking + SCRUM en 6 semanas" data-en="Design Thinking + SCRUM in 6 weeks">Design Thinking + SCRUM en 6 semanas</div>
+        </div>
+      </div>
+      <div class="phase-body">
+
+        <h3 data-es="Decisiones de diseño clave" data-en="Key design decisions">Decisiones de diseño clave</h3>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon">✅</div>
+            <div class="feature-title" data-es="Validaciones en tiempo real" data-en="Real-time validations">Validaciones en tiempo real</div>
+            <p class="feature-desc" data-es="Cada campo crítico (RFC, razón social, CLABE) se valida al momento de la captura, antes de que la solicitud avance. Los errores se resuelven en el origen, no al final del flujo." data-en="Each critical field (RFC, company name, CLABE) is validated at the moment of capture, before the request advances. Errors are resolved at the source, not at the end of the flow.">Cada campo crítico (RFC, razón social, CLABE) se valida al momento de la captura. Los errores se resuelven en el origen, no al final del flujo.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔗</div>
+            <div class="feature-title" data-es="Integración con la API del SAT" data-en="SAT API integration">Integración con la API del SAT</div>
+            <p class="feature-desc" data-es="La plataforma emite facturas con timbrado fiscal directamente desde el portal, eliminando el paso de exportar datos a un sistema externo." data-en="The platform issues invoices with digital stamp directly from the portal, eliminating the step of exporting data to an external system.">La plataforma emite facturas con timbrado fiscal directamente desde el portal, eliminando la exportación a sistemas externos.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <div class="feature-title" data-es="Visualización de estatus en tiempo real" data-en="Real-time status visualization">Visualización de estatus en tiempo real</div>
+            <p class="feature-desc" data-es="El equipo puede ver en qué estado está cada factura según la respuesta del SAT: autorizada, rechazada, pendiente — con el motivo específico de rechazo cuando aplica." data-en="The team can see the status of each invoice according to the SAT response: authorized, rejected, pending — with the specific rejection reason when applicable.">Cada factura muestra su estado SAT en tiempo real: autorizada, rechazada, pendiente — con el motivo específico de rechazo cuando aplica.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📋</div>
+            <div class="feature-title" data-es="Notas de crédito integradas" data-en="Integrated credit notes">Notas de crédito integradas</div>
+            <p class="feature-desc" data-es="Cuando una factura requiere cancelación, el flujo de nota de crédito vive dentro de la misma herramienta, sin salir a sistemas externos." data-en="When an invoice requires cancellation, the credit note flow lives within the same tool, without leaving to external systems.">Cuando una factura requiere cancelación, el flujo de nota de crédito vive dentro de la misma herramienta, sin depender de sistemas externos.</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top:28px;" data-es="El momento donde SCRUM salvó el proyecto" data-en="The moment SCRUM saved the project">El momento donde SCRUM salvó el proyecto</h3>
+
+        <div class="pull-quote">
+          <p data-es="Al presentar el primer MVP para aprobación de stakeholders, negocio introdujo nuevos requerimientos no contemplados en el alcance original: emisión directa de facturas desde el portal, notas de crédito y visualización de estatus SAT en tiempo real. En lugar de tratar esto como un bloqueo, lo gestioné como un cambio de sprint — en menos de una semana hice el análisis de impacto en conjunto con el equipo de backend, redefiní el alcance y ajusté los flujos afectados. El retraso fue de días, no de semanas." data-en="When presenting the first MVP for stakeholder approval, business introduced new requirements not contemplated in the original scope: direct invoice issuance from the portal, credit notes and real-time SAT status visualization. Instead of treating this as a blocker, I managed it as a sprint change — in less than a week I did the impact analysis together with the backend team, redefined the scope and adjusted the affected flows. The delay was days, not weeks.">Al presentar el primer MVP, negocio introdujo nuevos requerimientos no contemplados en el alcance original. En lugar de tratar esto como un bloqueo, lo gestioné como un cambio de sprint — análisis de impacto, redefinición de alcance y ajuste de flujos en menos de una semana. El retraso fue de días, no de semanas.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FASE 04: ENTREGA -->
+    <div class="phase green-phase reveal">
+      <div class="phase-header">
+        <div class="phase-number green">04</div>
+        <div>
+          <div class="phase-title" data-es="Entrega" data-en="Delivery">Entrega</div>
+          <div class="phase-subtitle" data-es="41 mockups · Flujo completo de facturación" data-en="41 mockups · Complete billing flow">41 mockups · Flujo completo de facturación</div>
+        </div>
+      </div>
+      <div class="phase-body">
+
+        <p data-es="41 mockups de alta fidelidad que cubren el flujo completo de facturación — incluyendo pantallas de error mapeadas contra el catálogo oficial de respuestas de la API del SAT. Cada estado de error tiene su propia pantalla con instrucción clara de qué corregir y cómo." data-en="41 high-fidelity mockups covering the complete billing flow — including error screens mapped against the official SAT API response catalog. Each error state has its own screen with a clear instruction on what to fix and how.">41 mockups de alta fidelidad que cubren el flujo completo de facturación — incluyendo pantallas de error mapeadas contra el catálogo oficial de respuestas de la API del SAT. Cada estado de error tiene su propia pantalla con instrucción clara de qué corregir y cómo.</p>
+
+        <div class="metrics-grid" style="margin-top:20px;">
+          <div class="metric-card">
+            <div class="metric-value green">41</div>
+            <div class="metric-label" data-es="mockups finales en alta fidelidad" data-en="final high-fidelity mockups">mockups finales en alta fidelidad</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">2</div>
+            <div class="metric-label" data-es="perfiles cubiertos: Ventas y Finanzas" data-en="profiles covered: Sales and Finance">perfiles cubiertos: Ventas y Finanzas</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value green">100%</div>
+            <div class="metric-label" data-es="estados de error del catálogo SAT documentados" data-en="SAT catalog error states documented">estados de error SAT documentados</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value">1</div>
+            <div class="metric-label" data-es="integración con API SAT para timbrado directo" data-en="SAT API integration for direct stamping">integración API SAT para timbrado directo</div>
+          </div>
+        </div>
+
+        <div class="case-mockup-rows" style="margin-top:28px;">
+          <div class="case-mockup-row">
+            <figure class="case-mockup-browser">
+              <div class="case-browser">
+                <div class="case-browser__chrome">
+                  <div class="case-browser__dots" aria-hidden="true">
+                    <span class="case-browser__dot case-browser__dot--r"></span>
+                    <span class="case-browser__dot case-browser__dot--y"></span>
+                    <span class="case-browser__dot case-browser__dot--g"></span>
+                  </div>
+                  <div class="case-browser__url">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                    <span>facturacion.minu.mx/nueva-factura</span>
+                  </div>
+                </div>
+                <img src="/mockups-facturacion-1.png" alt="Facturación minu — pantalla 1" loading="lazy" decoding="async" />
+              </div>
+            </figure>
+            <figure class="case-mockup-card">
+              <img src="/mockups-facturacion-2.png" alt="Facturación minu — pantalla 2" loading="lazy" decoding="async" />
+            </figure>
+          </div>
+          <div class="case-mockup-row">
+            <figure class="case-mockup-card">
+              <img src="/mockups-facturacion-3.png" alt="Facturación minu — pantalla 3" loading="lazy" decoding="async" />
+            </figure>
+            <figure class="case-mockup-browser">
+              <div class="case-browser">
+                <div class="case-browser__chrome">
+                  <div class="case-browser__dots" aria-hidden="true">
+                    <span class="case-browser__dot case-browser__dot--r"></span>
+                    <span class="case-browser__dot case-browser__dot--y"></span>
+                    <span class="case-browser__dot case-browser__dot--g"></span>
+                  </div>
+                  <div class="case-browser__url">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                    <span>facturacion.minu.mx/historial</span>
+                  </div>
+                </div>
+                <img src="/mockups-facturacion-4.png" alt="Facturación minu — pantalla 4" loading="lazy" decoding="async" />
+              </div>
+            </figure>
+          </div>
+          <div class="case-mockup-row">
+            <figure class="case-mockup-browser">
+              <div class="case-browser">
+                <div class="case-browser__chrome">
+                  <div class="case-browser__dots" aria-hidden="true">
+                    <span class="case-browser__dot case-browser__dot--r"></span>
+                    <span class="case-browser__dot case-browser__dot--y"></span>
+                    <span class="case-browser__dot case-browser__dot--g"></span>
+                  </div>
+                  <div class="case-browser__url">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                    <span>facturacion.minu.mx/estatus</span>
+                  </div>
+                </div>
+                <img src="/mockups-facturacion-5.png" alt="Facturación minu — pantalla 5" loading="lazy" decoding="async" />
+              </div>
+            </figure>
+            <figure class="case-mockup-card">
+              <img src="/mockups-facturacion-6.png" alt="Facturación minu — pantalla 6" loading="lazy" decoding="async" />
+            </figure>
+          </div>
+          <div class="case-mockup-row">
+            <figure class="case-mockup-card">
+              <img src="/mockups-facturacion-7.png" alt="Facturación minu — pantalla 7" loading="lazy" decoding="async" />
+            </figure>
+            <figure class="case-mockup-browser">
+              <div class="case-browser">
+                <div class="case-browser__chrome">
+                  <div class="case-browser__dots" aria-hidden="true">
+                    <span class="case-browser__dot case-browser__dot--r"></span>
+                    <span class="case-browser__dot case-browser__dot--y"></span>
+                    <span class="case-browser__dot case-browser__dot--g"></span>
+                  </div>
+                  <div class="case-browser__url">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                    <span>facturacion.minu.mx/notas-credito</span>
+                  </div>
+                </div>
+                <img src="/mockups-facturacion-8.png" alt="Facturación minu — pantalla 8" loading="lazy" decoding="async" />
+              </div>
+            </figure>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CONCLUSIÓN -->
+    <div class="section-divider"></div>
+    <div class="phase reveal">
+      <div class="phase-header">
+        <div class="phase-number blue">05</div>
+        <div>
+          <div class="phase-title" data-es="Conclusión y Aprendizajes" data-en="Conclusion & Learnings">Conclusión y Aprendizajes</div>
+          <div class="phase-subtitle" data-es="Diseñar confianza, no restricciones" data-en="Designing trust, not restrictions">Diseñar confianza, no restricciones</div>
+        </div>
+      </div>
+      <div class="learning-block">
+        <p data-es="La herramienta está actualmente en uso dentro de minu. La reducción de facturas con errores permitió acortar el ciclo de cobro y disminuir el churn por facturas vencidas atribuible a datos incorrectos." data-en="The tool is currently in use within minu. The reduction of invoices with errors allowed shortening the collection cycle and decreasing churn from overdue invoices attributable to incorrect data.">La herramienta está actualmente en uso dentro de minu. La reducción de facturas con errores permitió acortar el ciclo de cobro y disminuir el churn por facturas vencidas atribuible a datos incorrectos.</p>
+
+        <div class="pull-quote" style="margin-top:20px;">
+          <p data-es='"Diseñar validaciones no es diseñar restricciones — es diseñar confianza. Cuando el sistema no deja avanzar un dato incorrecto, no frustra al usuario: lo protege de un problema mayor más adelante."' data-en='"Designing validations isn&apos;t designing restrictions — it&apos;s designing trust. When the system doesn&apos;t let an incorrect data point advance, it doesn&apos;t frustrate the user: it protects them from a bigger problem down the road."'>"Diseñar validaciones no es diseñar restricciones — es diseñar confianza. Cuando el sistema no deja avanzar un dato incorrecto, no frustra al usuario: lo protege de un problema mayor más adelante."</p>
+          <cite data-es="— Mariana Hernández" data-en="— Mariana Hernández">— Mariana Hernández</cite>
+        </div>
+
+        <h3 style="margin-top:28px;" data-es="Aprendizajes clave" data-en="Key learnings">Aprendizajes clave</h3>
+        <ul class="rule-list">
+          <li data-es="Los cambios de requerimientos en MVP no son fracasos del proceso — son señales de que el producto está madurando en tiempo real. La velocidad de respuesta ante ese cambio es parte del valor que aporta un designer senior." data-en="Requirements changes in MVP aren't process failures — they're signals that the product is maturing in real time. Speed of response to that change is part of the value a senior designer brings.">Los cambios de requerimientos en MVP no son fracasos del proceso — son señales de que el producto está madurando en tiempo real. La velocidad de respuesta ante ese cambio es parte del valor que aporta un designer senior.</li>
+          <li data-es="Proponer una solución de diseño vs. una contratación es hablar el idioma del negocio. El ROI de una herramienta bien diseñada supera al de cualquier proceso manual supervisado por personas." data-en="Proposing a design solution vs. a hire is speaking the language of business. The ROI of a well-designed tool surpasses that of any manually supervised process.">Proponer una solución de diseño vs. una contratación es hablar el idioma del negocio. El ROI de una herramienta bien diseñada supera al de cualquier proceso manual supervisado por personas.</li>
+          <li data-es="Mapear los estados de error de una API no es un detalle técnico — es UX crítico. Un usuario que no entiende por qué su factura fue rechazada repetirá el error." data-en="Mapping an API's error states isn't a technical detail — it's critical UX. A user who doesn't understand why their invoice was rejected will repeat the error.">Mapear los estados de error de una API no es un detalle técnico — es UX crítico. Un usuario que no entiende por qué su factura fue rechazada repetirá el error.</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="case-more-projects reveal" aria-labelledby="case-more-projects-heading-m5">
+      <p
+        class="case-more-projects__eyebrow"
+        data-es="Más casos de estudio"
+        data-en="More case studies"
+      >
+        Más casos de estudio
+      </p>
+      <h2 id="case-more-projects-heading-m5" class="case-more-projects__title" data-es="Otros proyectos" data-en="Other projects">
+        Otros proyectos
+      </h2>
+      <p
+        class="case-more-projects__lead"
+        data-es="Consulta cómo se tradujo investigación, arquitectura de información y diseño de producto en otros retos — también en contexto educativo y B2B."
+        data-en="See how research, information architecture and product design played out in other challenges — in education and B2B contexts too."
+      >
+        Consulta cómo se tradujo investigación, arquitectura de información y diseño de producto en otros retos — también en contexto educativo y B2B.
+      </p>
+      <div class="case-more-projects__grid">
+        <a href="/proyecto-3" class="case-next-card">
+          <div class="case-next-card__cover case-next-card__cover--investigacion">
+            <img
+              class="case-next-card__logo case-next-card__logo--theme-light"
+              src="/portada-investigacion-light.png"
+              alt=""
+              width="200"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              class="case-next-card__logo case-next-card__logo--theme-dark"
+              src="/portada-investigacion-dark.png"
+              alt=""
+              width="200"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="case-next-card__body">
+            <span class="case-next-card__tag" data-es="Educación · Portal Institucional" data-en="Education · Institutional Portal">Educación · Portal Institucional</span>
+            <div class="case-next-card__name" data-es="Investigación UP" data-en="UP Research">Investigación UP</div>
+            <p
+              class="case-next-card__desc"
+              data-es="Del repositorio a la vitrina de talento — 5 entrevistas, Empathy Maps, VPC, IA y 17 mockups finales."
+              data-en="From repository to talent showcase — 5 interviews, Empathy Maps, VPC, IA and 17 final mockups."
+            >
+              Del repositorio a la vitrina de talento — 5 entrevistas, Empathy Maps, VPC, IA y 17 mockups finales.
+            </p>
+            <span class="case-next-card__cta" data-es="Ver caso de estudio →" data-en="View case study →">Ver caso de estudio →</span>
+          </div>
+        </a>
+        <a href="/proyecto-4" class="case-next-card">
+          <div class="case-next-card__cover case-next-card__cover--fitlife">
+            <img
+              class="case-next-card__logo case-next-card__logo--theme-light"
+              src="/portada-fitlife-light.png"
+              alt=""
+              width="200"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              class="case-next-card__logo case-next-card__logo--theme-dark"
+              src="/portada-fitlife-fixed.png"
+              alt=""
+              width="200"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="case-next-card__body">
+            <span class="case-next-card__tag" data-es="App · Mobile · B2C" data-en="App · Mobile · B2C">App · Mobile · B2C</span>
+            <div class="case-next-card__name" data-es="Fitlife" data-en="Fitlife">Fitlife</div>
+            <p
+              class="case-next-card__desc"
+              data-es="109 pantallas end-to-end — el cliente pidió una app, el análisis reveló que necesitaba un ecosistema."
+              data-en="109 screens end-to-end — the client asked for an app; analysis showed they needed an ecosystem."
+            >
+              109 pantallas end-to-end — el cliente pidió una app, el análisis reveló que necesitaba un ecosistema.
+            </p>
+            <span class="case-next-card__cta" data-es="Ver caso de estudio →" data-en="View case study →">Ver caso de estudio →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span class="site-footer__credit">Mariana Hernández © 2026</span>
+    </footer>
+
+  </div>
+</CaseStudyLayout>

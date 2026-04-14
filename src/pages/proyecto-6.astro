@@ -1,0 +1,339 @@
+---
+import CaseStudyLayout from "../layouts/CaseStudyLayout.astro";
+// proyecto-6.astro — Caso de estudio: Design System minu
+---
+<CaseStudyLayout title="Design System minu · Caso de Estudio · Mariana Hernández" activeBreadcrumbEs="Design System minu" activeBreadcrumbEn="minu Design System">
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="case-tag">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+        <span data-es="Design System · Fintech · B2B · Herramienta Interna" data-en="Design System · Fintech · B2B · Internal Tool">Design System · Fintech · B2B · Herramienta Interna</span>
+      </div>
+      <h1 class="case-title">minu Design System: <em data-es="De 150 verdes a un lenguaje visual que escala" data-en="From 150 greens to a visual language that scales">De 150 verdes a un lenguaje visual que escala</em></h1>
+      <p class="case-hook">
+        <span data-es="Cuando llegué a minu, cada producto visual era una isla. La app, la plataforma web y las herramientas internas compartían una marca pero no un sistema — y eso le estaba costando clientes reales a la empresa. El reto: construir desde cero las bases de un design system que permitiera personalización sin romper nada." data-en="When I joined minu, every visual product was an island. The app, the web platform and internal tools shared a brand but not a system — and that was costing the company real clients. The challenge: build the foundations of a design system from scratch that allowed customization without breaking anything.">Cuando llegué a minu, cada producto visual era una isla. La app, la plataforma web y las herramientas internas compartían una marca pero no un sistema — y eso le estaba costando clientes reales a la empresa. El reto: construir desde cero las bases de un design system que permitiera personalización sin romper nada.</span>
+      </p>
+      <div class="meta-row">
+        <div class="meta-pill">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg>
+          <span class="label" data-es="Rol:" data-en="Role:">Rol:</span>
+          <span data-es="Product Designer" data-en="Product Designer">Product Designer</span>
+        </div>
+        <div class="meta-pill">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          <span class="label" data-es="Cliente:" data-en="Client:">Cliente:</span>
+          <span>minu</span>
+        </div>
+        <div class="meta-pill">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span class="label" data-es="Alcance:" data-en="Scope:">Alcance:</span>
+          <span data-es="Design Tokens MVP · 4 productos · 2 verticales" data-en="Design Tokens MVP · 4 products · 2 verticals">Design Tokens MVP · 4 productos · 2 verticales</span>
+        </div>
+      </div>
+    </div>
+    <div class="case-project-hero-image">
+      <img
+        src="/proyecto-ds.png"
+        alt="minu Design System"
+        width="1728"
+        height="559"
+        loading="eager"
+        decoding="async"
+      />
+    </div>
+  </header>
+
+  <div class="page">
+
+    <!-- FASE 01: EL PROBLEMA -->
+    <div class="phase blue-phase reveal">
+      <div class="phase-header">
+        <div class="phase-number blue">01</div>
+        <div>
+          <div class="phase-title" data-es="El problema" data-en="The problem">El problema</div>
+          <div class="phase-subtitle" data-es="Un sistema que crecía sin estructura" data-en="A system growing without structure">Un sistema que crecía sin estructura</div>
+        </div>
+      </div>
+      <div class="phase-body">
+
+        <h3 data-es="150 verdes y ninguna regla" data-en="150 greens and no rules">150 verdes y ninguna regla</h3>
+        <p data-es="minu no tenía pautas de diseño establecidas. El color de acento principal — el verde que define la identidad visual de la marca — existía en más de 150 variaciones distintas distribuidas entre la app móvil, la plataforma web y los productos de las dos verticales de negocio: Suscripciones y Caja de Ahorro. Cada producto había crecido de forma independiente, tomando decisiones visuales sin un marco común." data-en="minu had no established design guidelines. The main accent color — the green that defines the brand's visual identity — existed in more than 150 different variations distributed across the mobile app, the web platform and the products of the two business verticals: Subscriptions and Savings Fund. Each product had grown independently, making visual decisions without a common framework.">minu no tenía pautas de diseño establecidas. El color de acento principal — el verde que define la identidad visual de la marca — existía en más de 150 variaciones distintas distribuidas entre la app móvil, la plataforma web y los productos de las dos verticales de negocio: Suscripciones y Caja de Ahorro. Cada producto había crecido de forma independiente, tomando decisiones visuales sin un marco común.</p>
+
+        <p style="margin-top:12px;" data-es="El resultado era invisible para el usuario final pero devastador para el equipo: cada nuevo desarrollo requería decisiones de diseño que ya deberían estar resueltas, y cada cambio visual tenía el potencial de romper algo en otro producto de forma impredecible." data-en="The result was invisible to the end user but devastating for the team: every new development required design decisions that should already be resolved, and every visual change had the potential to break something in another product in an unpredictable way.">El resultado era invisible para el usuario final pero devastador para el equipo: cada nuevo desarrollo requería decisiones de diseño que ya deberían estar resueltas, y cada cambio visual tenía el potencial de romper algo en otro producto de forma impredecible.</p>
+
+        <h3 style="margin-top:24px;" data-es="El problema de negocio que lo hizo urgente" data-en="The business problem that made it urgent">El problema de negocio que lo hizo urgente</h3>
+        <p data-es="Al menos el 20% de los prospectos y clientes formales de minu solicitaban personalización de la app con su propio logo y colores — una necesidad legítima de comunicación interna corporativa. minu no podía ofrecerlo. La razón era técnica pero tenía raíz en diseño: sin un sistema de tokens estructurado, personalizar cualquier producto implicaba una probabilidad del 90% de generar errores a nivel global en todos los demás." data-en="At least 20% of minu's prospects and formal clients requested app customization with their own logo and colors — a legitimate corporate internal communication need. minu couldn't offer it. The reason was technical but rooted in design: without a structured token system, customizing any product implied a 90% probability of generating global errors across all others.">Al menos el 20% de los prospectos y clientes formales de minu solicitaban personalización de la app con su propio logo y colores. minu no podía ofrecerlo: sin tokens estructurados, personalizar cualquier producto implicaba una probabilidad del 90% de romper los demás.</p>
+
+        <div class="pull-quote" style="margin-top:20px;">
+          <p data-es="Esos clientes que pedían personalización y no la obtenían, simplemente no contrataban." data-en="Those clients who asked for customization and didn't get it, simply didn't sign.">Esos clientes que pedían personalización y no la obtenían, simplemente no contrataban.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FASE 02: LA PROPUESTA -->
+    <div class="phase green-phase reveal">
+      <div class="phase-header">
+        <div class="phase-number green">02</div>
+        <div>
+          <div class="phase-title" data-es="La propuesta" data-en="The proposal">La propuesta</div>
+          <div class="phase-subtitle" data-es="Un argumento de negocio, no solo de diseño" data-en="A business argument, not just a design one">Un argumento de negocio, no solo de diseño</div>
+        </div>
+      </div>
+      <div class="phase-body">
+
+        <p data-es="Junto con el Head de Frontend, analizamos la viabilidad del proyecto y construimos el caso para presentarlo a negocio. Los números eran claros:" data-en="Together with the Head of Frontend, we analyzed the project's feasibility and built the case to present to business. The numbers were clear:">Junto con el Head de Frontend, analizamos la viabilidad del proyecto y construimos el caso para presentarlo a negocio. Los números eran claros:</p>
+
+        <ul class="rule-list" style="margin-top:16px;">
+          <li data-es="Los tiempos de desarrollo se reducirían al menos un 15% al eliminar decisiones visuales redundantes y errores por inconsistencia." data-en="Development times would be reduced by at least 15% by eliminating redundant visual decisions and inconsistency errors.">Los tiempos de desarrollo se reducirían al menos un 15% al eliminar decisiones visuales redundantes y errores por inconsistencia.</li>
+          <li data-es="El segmento de clientes que no contrataba por falta de personalización podría desbloquearse — representando una oportunidad de revenue directa." data-en="The segment of clients who didn't sign due to lack of customization could be unlocked — representing a direct revenue opportunity.">El segmento de clientes que no contrataba por falta de personalización podría desbloquearse — representando una oportunidad de revenue directa.</li>
+        </ul>
+
+        <p style="margin-top:16px;" data-es="La resistencia al cambio fue real. Un design system no es solo una decisión de producto — afecta desarrollo, diseño y negocio simultáneamente. Fue la evidencia en datos la que desbloqueó la aprobación: tiempos de desarrollo documentados y el volumen de clientes perdidos por esta limitación técnica." data-en="Resistance to change was real. A design system isn't just a product decision — it affects development, design and business simultaneously. It was the data evidence that unlocked approval: documented development times and the volume of clients lost due to this technical limitation.">La resistencia al cambio fue real. Un design system afecta desarrollo, diseño y negocio simultáneamente. Fue la evidencia en datos la que desbloqueó la aprobación: tiempos de desarrollo documentados y el volumen de clientes perdidos por esta limitación técnica.</p>
+
+        <h3 style="margin-top:24px;" data-es="El scope del MVP" data-en="The MVP scope">El scope del MVP</h3>
+        <p data-es="En lugar de intentar construir el sistema completo de una vez, definimos un primer MVP enfocado exclusivamente en Design Tokens — la capa fundacional que haría posible todo lo demás." data-en="Instead of trying to build the complete system at once, we defined a first MVP focused exclusively on Design Tokens — the foundational layer that would make everything else possible.">En lugar de intentar construir el sistema completo de una vez, definimos un primer MVP enfocado exclusivamente en Design Tokens — la capa fundacional que haría posible todo lo demás.</p>
+
+        <div class="feature-grid" style="margin-top:16px;">
+          <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <div class="feature-title" data-es="Paleta de color tokenizada" data-en="Tokenized color palette">Paleta de color tokenizada</div>
+            <p class="feature-desc" data-es="Documentada y estructurada para soportar personalización de marca por cliente sin afectar el resto del sistema." data-en="Documented and structured to support per-client brand customization without affecting the rest of the system.">Documentada y estructurada para soportar personalización de marca por cliente sin afectar el resto del sistema.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">Aa</div>
+            <div class="feature-title" data-es="Tipografía sistematizada" data-en="Systematized typography">Tipografía sistematizada</div>
+            <p class="feature-desc" data-es="Escalas tipográficas unificadas para app móvil y plataforma web, con tokens para cada nivel jerárquico." data-en="Unified typographic scales for mobile app and web platform, with tokens for each hierarchical level.">Escalas tipográficas unificadas para app móvil y plataforma web, con tokens para cada nivel jerárquico.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">◼</div>
+            <div class="feature-title" data-es="Biblioteca de iconos unificada" data-en="Unified icon library">Biblioteca de iconos unificada</div>
+            <p class="feature-desc" data-es="Un solo set de iconos con criterios claros de uso para todos los productos de ambas verticales." data-en="A single icon set with clear usage criteria for all products across both verticals.">Un solo set de iconos con criterios claros de uso para todos los productos de ambas verticales.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FASE 03: EL PROCESO -->
+    <div class="phase blue-phase reveal">
+      <div class="phase-header">
+        <div class="phase-number blue">03</div>
+        <div>
+          <div class="phase-title" data-es="El proceso" data-en="The process">El proceso</div>
+          <div class="phase-subtitle" data-es="Diseñar para dos verticales y escalarlas" data-en="Designing for two verticals and scaling them">Diseñar para dos verticales y escalarlas</div>
+        </div>
+      </div>
+      <div class="phase-body">
+
+        <p data-es="El análisis no partió de los productos existentes sino de los requerimientos futuros. Estudié las necesidades de los productos de ambas verticales — Suscripciones y Caja de Ahorro —, que convivían en una sola app, para garantizar que los tokens no solo resolvieran el problema actual sino que fueran escalables a nuevos productos sin requerir redefinición del sistema." data-en="The analysis didn't start from existing products but from future requirements. I studied the needs of both verticals' products — Subscriptions and Savings Fund —, which coexisted in a single app, to ensure the tokens not only solved the current problem but were scalable to new products without requiring system redefinition.">El análisis no partió de los productos existentes sino de los requerimientos futuros. Estudié las necesidades de los productos de ambas verticales — Suscripciones y Caja de Ahorro —, que convivían en una sola app, para garantizar que los tokens fueran escalables a nuevos productos sin requerir redefinición del sistema.</p>
+
+        <p style="margin-top:12px;" data-es="Cada decisión de token se documentó en Figma con criterios claros de uso, restricciones y casos de aplicación. El objetivo era que cualquier persona del equipo — diseño o desarrollo — pudiera tomar una decisión visual correcta sin necesitar consultar a nadie." data-en="Each token decision was documented in Figma with clear usage criteria, restrictions and application cases. The goal was for any team member — design or development — to make a correct visual decision without needing to consult anyone.">Cada decisión de token se documentó en Figma con criterios claros de uso, restricciones y casos de aplicación. El objetivo era que cualquier persona del equipo — diseño o desarrollo — pudiera tomar una decisión visual correcta sin necesitar consultar a nadie.</p>
+
+        <p style="margin-top:12px;" data-es="Una vez diseñados, el Head de Frontend lideró la implementación junto con su equipo, traduciendo los tokens de Figma a variables de código disponibles para todos los productos." data-en="Once designed, the Head of Frontend led the implementation together with their team, translating Figma tokens into code variables available for all products.">Una vez diseñados, el Head de Frontend lideró la implementación junto con su equipo, traduciendo los tokens de Figma a variables de código disponibles para todos los productos.</p>
+
+      </div>
+    </div>
+
+    <!-- FASE 04: RESULTADOS -->
+    <div class="phase green-phase reveal">
+      <div class="phase-header">
+        <div class="phase-number green">04</div>
+        <div>
+          <div class="phase-title" data-es="Resultados" data-en="Results">Resultados</div>
+          <div class="phase-subtitle" data-es="La implementación está en uso en todos los productos" data-en="Implementation is live across all products">La implementación está en uso en todos los productos</div>
+        </div>
+      </div>
+      <div class="phase-body">
+
+        <ul class="rule-list">
+          <li data-es="–15% en tiempos de desarrollo — confirmado tras la implementación. El equipo dejó de tomar decisiones visuales caso por caso." data-en="–15% in development times — confirmed after implementation. The team stopped making visual decisions case by case.">–15% en tiempos de desarrollo — confirmado tras la implementación. El equipo dejó de tomar decisiones visuales caso por caso.</li>
+          <li data-es="Personalización desbloqueada — minu puede ofrecer hoy personalización de marca en app y plataforma web a sus clientes corporativos, en ambas verticales de negocio." data-en="Customization unlocked — minu can now offer brand customization in app and web platform to its corporate clients, across both business verticals.">Personalización desbloqueada — minu puede ofrecer hoy personalización de marca en app y plataforma web a sus clientes corporativos, en ambas verticales de negocio.</li>
+          <li data-es="Flujo de trabajo transformado — el equipo de desarrollo por primera vez tenía la información que necesitaba documentada, centralizada y lista para usar. Las decisiones visuales dejaron de ser un cuello de botella." data-en="Workflow transformed — the development team for the first time had the information they needed documented, centralized and ready to use. Visual decisions stopped being a bottleneck.">Flujo de trabajo transformado — el equipo de desarrollo por primera vez tenía la información que necesitaba documentada, centralizada y lista para usar. Las decisiones visuales dejaron de ser un cuello de botella.</li>
+        </ul>
+
+        <figure style="margin-top:28px; display:flex; flex-direction:column; gap:16px;">
+
+          <!-- App — fila 1 -->
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px; max-width:680px; margin:0 auto; width:100%;">
+            <img src="/mockup-ds-1.png" alt="minu Design System — pantalla app 1" loading="lazy" decoding="async" style="width:100%; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.10);" />
+            <img src="/mockup-ds-2.png" alt="minu Design System — pantalla app 2" loading="lazy" decoding="async" style="width:100%; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.10);" />
+            <img src="/mockup-ds-3.png" alt="minu Design System — pantalla app 3" loading="lazy" decoding="async" style="width:100%; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.10);" />
+          </div>
+
+          <!-- App — fila 2 -->
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px; max-width:680px; margin:0 auto; width:100%;">
+            <img src="/mockup-ds-4.png" alt="minu Design System — pantalla app 4" loading="lazy" decoding="async" style="width:100%; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.10);" />
+            <img src="/mockup-ds-5.png" alt="minu Design System — pantalla app 5" loading="lazy" decoding="async" style="width:100%; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.10);" />
+            <img src="/mockup-ds-6.png" alt="minu Design System — pantalla app 6" loading="lazy" decoding="async" style="width:100%; border-radius:16px; box-shadow:0 4px 20px rgba(0,0,0,0.10);" />
+          </div>
+
+          <!-- Web — fila 3, con marco de navegador -->
+          <div class="case-mockup-rows" style="margin-top:4px;">
+            <div class="case-mockup-row">
+              <figure class="case-mockup-browser">
+                <div class="case-browser">
+                  <div class="case-browser__chrome">
+                    <div class="case-browser__dots" aria-hidden="true">
+                      <span class="case-browser__dot case-browser__dot--r"></span>
+                      <span class="case-browser__dot case-browser__dot--y"></span>
+                      <span class="case-browser__dot case-browser__dot--g"></span>
+                    </div>
+                    <div class="case-browser__url">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                      <span>app.minu.mx</span>
+                    </div>
+                  </div>
+                  <img src="/mockup-ds-7.png" alt="minu Design System — pantalla web 1" loading="lazy" decoding="async" />
+                </div>
+              </figure>
+              <figure class="case-mockup-browser">
+                <div class="case-browser">
+                  <div class="case-browser__chrome">
+                    <div class="case-browser__dots" aria-hidden="true">
+                      <span class="case-browser__dot case-browser__dot--r"></span>
+                      <span class="case-browser__dot case-browser__dot--y"></span>
+                      <span class="case-browser__dot case-browser__dot--g"></span>
+                    </div>
+                    <div class="case-browser__url">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                      <span>app.minu.mx</span>
+                    </div>
+                  </div>
+                  <img src="/mockup-ds-8.png" alt="minu Design System — pantalla web 2" loading="lazy" decoding="async" />
+                </div>
+              </figure>
+            </div>
+          </div>
+
+          <figcaption style="font-size:0.8rem; color:var(--text3); margin-top:4px; line-height:1.5;">
+            <span data-es="Algunos mockups finales con el primer MVP del Design System aplicado." data-en="Some final mockups with the first Design System MVP applied.">Algunos mockups finales con el primer MVP del Design System aplicado.</span>
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+
+    <!-- CONCLUSIÓN -->
+    <div class="section-divider"></div>
+    <div class="phase reveal">
+      <div class="phase-header">
+        <div class="phase-number blue">05</div>
+        <div>
+          <div class="phase-title" data-es="Conclusión y Aprendizajes" data-en="Conclusion & Learnings">Conclusión y Aprendizajes</div>
+          <div class="phase-subtitle" data-es="Un entregable de diseño que habla el idioma del negocio" data-en="A design deliverable that speaks the language of business">Un entregable de diseño que habla el idioma del negocio</div>
+        </div>
+      </div>
+      <div class="learning-block">
+
+        <div class="pull-quote">
+          <p data-es='"Un design system no es un entregable de diseño — es una decisión de negocio. Si no puedes explicar su impacto en revenue y en tiempos de desarrollo, no vas a conseguir que lo aprueben."' data-en='"A design system isn&apos;t a design deliverable — it&apos;s a business decision. If you can&apos;t explain its impact on revenue and development times, you won&apos;t get it approved."'>"Un design system no es un entregable de diseño — es una decisión de negocio. Si no puedes explicar su impacto en revenue y en tiempos de desarrollo, no vas a conseguir que lo aprueben."</p>
+          <cite data-es="— Mariana Hernández" data-en="— Mariana Hernández">— Mariana Hernández</cite>
+        </div>
+
+        <h3 style="margin-top:28px;" data-es="Aprendizajes clave" data-en="Key learnings">Aprendizajes clave</h3>
+        <ul class="rule-list">
+          <li data-es="La resistencia al cambio en proyectos de sistema no se vence con argumentos de calidad visual — se vence con datos de negocio. El porcentaje de clientes perdidos fue más convincente que cualquier argumento sobre consistencia." data-en="Resistance to change in system projects isn't overcome with visual quality arguments — it's overcome with business data. The percentage of lost clients was more convincing than any argument about consistency.">La resistencia al cambio en proyectos de sistema no se vence con argumentos de calidad visual — se vence con datos de negocio. El porcentaje de clientes perdidos fue más convincente que cualquier argumento sobre consistencia.</li>
+          <li data-es="Diseñar tokens para escalar requiere entender los productos que aún no existen. El análisis de requerimientos futuros fue la diferencia entre un sistema que dura y uno que se queda obsoleto al primer nuevo producto." data-en="Designing tokens to scale requires understanding products that don't exist yet. Future requirements analysis was the difference between a system that lasts and one that becomes obsolete at the first new product.">Diseñar tokens para escalar requiere entender los productos que aún no existen. El análisis de requerimientos futuros fue la diferencia entre un sistema que dura y uno que se queda obsoleto al primer nuevo producto.</li>
+          <li data-es="Un MVP bien acotado genera más confianza que un sistema completo prometido. Entregar tokens antes que componentes permitió que el equipo de desarrollo validara el valor del sistema antes de comprometer más recursos." data-en="A well-scoped MVP generates more trust than a promised complete system. Delivering tokens before components allowed the development team to validate the system's value before committing more resources.">Un MVP bien acotado genera más confianza que un sistema completo prometido. Entregar tokens antes que componentes permitió que el equipo de desarrollo validara el valor del sistema antes de comprometer más recursos.</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <section class="case-more-projects reveal" aria-labelledby="case-more-projects-heading-m6">
+      <p
+        class="case-more-projects__eyebrow"
+        data-es="Más casos de estudio"
+        data-en="More case studies"
+      >
+        Más casos de estudio
+      </p>
+      <h2 id="case-more-projects-heading-m6" class="case-more-projects__title" data-es="Otros proyectos" data-en="Other projects">
+        Otros proyectos
+      </h2>
+      <p
+        class="case-more-projects__lead"
+        data-es="Consulta cómo se tradujo investigación, arquitectura de información y diseño de producto en otros retos — también en contexto educativo y B2B."
+        data-en="See how research, information architecture and product design played out in other challenges — in education and B2B contexts too."
+      >
+        Consulta cómo se tradujo investigación, arquitectura de información y diseño de producto en otros retos — también en contexto educativo y B2B.
+      </p>
+      <div class="case-more-projects__grid">
+        <a href="/proyecto-1" class="case-next-card">
+          <div class="case-next-card__cover case-next-card__cover--unimopay">
+            <img
+              class="case-next-card__logo case-next-card__logo--theme-light"
+              src="/portada-unimopay-light.png"
+              alt=""
+              width="200"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              class="case-next-card__logo case-next-card__logo--theme-dark"
+              src="/portada-unimopay-dark.png"
+              alt=""
+              width="200"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="case-next-card__body">
+            <span class="case-next-card__tag" data-es="B2B · Fintech Educativo" data-en="B2B · Educational Fintech">B2B · Fintech Educativo</span>
+            <div class="case-next-card__name" data-es="UNIMOPAY" data-en="UNIMOPAY">UNIMOPAY</div>
+            <p
+              class="case-next-card__desc"
+              data-es="Digitalizar el caos financiero — 7 flujos end-to-end, 4 perfiles y plataforma de gobierno financiero."
+              data-en="Digitalizing financial chaos — 7 end-to-end flows, 4 profiles and a financial governance platform."
+            >
+              Digitalizar el caos financiero — 7 flujos end-to-end, 4 perfiles y plataforma de gobierno financiero.
+            </p>
+            <span class="case-next-card__cta" data-es="Ver caso de estudio →" data-en="View case study →">Ver caso de estudio →</span>
+          </div>
+        </a>
+        <a href="/proyecto-4" class="case-next-card">
+          <div class="case-next-card__cover case-next-card__cover--fitlife">
+            <img
+              class="case-next-card__logo case-next-card__logo--theme-light"
+              src="/portada-fitlife-light.png"
+              alt=""
+              width="200"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              class="case-next-card__logo case-next-card__logo--theme-dark"
+              src="/portada-fitlife-fixed.png"
+              alt=""
+              width="200"
+              height="80"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="case-next-card__body">
+            <span class="case-next-card__tag" data-es="App · Mobile · B2C" data-en="App · Mobile · B2C">App · Mobile · B2C</span>
+            <div class="case-next-card__name" data-es="Fitlife" data-en="Fitlife">Fitlife</div>
+            <p
+              class="case-next-card__desc"
+              data-es="109 pantallas end-to-end — el cliente pidió una app, el análisis reveló que necesitaba un ecosistema."
+              data-en="109 screens end-to-end — the client asked for an app; analysis showed they needed an ecosystem."
+            >
+              109 pantallas end-to-end — el cliente pidió una app, el análisis reveló que necesitaba un ecosistema.
+            </p>
+            <span class="case-next-card__cta" data-es="Ver caso de estudio →" data-en="View case study →">Ver caso de estudio →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span class="site-footer__credit">Mariana Hernández © 2026</span>
+    </footer>
+
+  </div>
+</CaseStudyLayout>
